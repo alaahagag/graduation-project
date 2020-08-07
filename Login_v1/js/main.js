@@ -1,32 +1,37 @@
-function sendJSON(){ 
-            
-            let result = document.querySelector('.result'); 
-            let name = document.querySelector('#email'); 
-            let email = document.querySelector('#password'); 
-            
-            // Creating a XHR object 
-            let xhr = new XMLHttpRequest(); 
-            let url = "alaa.txt"; 
-        
-            // open a connection 
-            xhr.open("POST", url, true); 
 
-            // Set the request header i.e. which type of content you are sending 
-            xhr.setRequestHeader("Content-Type", "application/json"); 
+window.addEventListener( "load", function () {
+        function sendData() {
+        const XHR = new XMLHttpRequest();
 
-            // Create a state change callback 
-            xhr.onreadystatechange = function () { 
-                if (xhr.readyState === 4 && xhr.status === 200) { 
+        // Bind the FormData object and the form element
+        const FD = new FormData( form );
 
-                    // Print received data from server 
-                    result.innerHTML = this.responseText; 
+        // Define what happens on successful data submission
+        XHR.addEventListener( "load", function(event) {
+          alert( event.target.responseText );
+          console.log(this.responseText)
+        } );
 
-                } 
-            }; 
+        // Define what happens in case of error
+        XHR.addEventListener( "error", function( event ) {
+          alert( 'Oops! Something went wrong.' );
+        } );
 
-            // Converting JSON data to string 
-            var data = JSON.stringify({ "email": email.value, "password": password.value }); 
+        // Set up our request
+        XHR.open( "POST", "https://jsonplaceholder.typicode.com/users" );
 
-            // Sending data with the request 
-            xhr.send(data); 
-        } 
+        // The data sent is what the user provided in the form
+        XHR.send( FD );
+      }
+     
+      // Access the form element...
+      const form = document.getElementById( "login-form" );
+
+      // ...and take over its submit event.
+      form.addEventListener( "submit", function ( event ) {
+        event.preventDefault();
+
+        sendData();
+       
+  } );
+} );
