@@ -1,0 +1,25 @@
+{"email":"yasminrabea79@gmail.com",
+"password":"yasminrabea"}
+
+
+
+
+
+
+{
+	
+	 
+				"seizure":[{"generalizedMotors": [{"gmname":"uuuuuuuuu"}],"generalizednonMotors": [{"gnname":"makaakkaka"}],"assfeatures": [{"afname":"makaakkaka"}],"classification": [{"cname":"makaakkaka"}],"focalnonMotors": [{"fnmname":"makaakkaka"}],"focalMotors": [{"fmname":"makaakkaka"}]}]
+
+
+}
+
+input hidden:
+
+<input type="hidden" name="jsonObject"/>
+
+
+
+
+
+
