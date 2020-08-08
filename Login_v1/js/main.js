@@ -1,13 +1,12 @@
-
 function sendJSON(){ 
             
             let result = document.querySelector('.result'); 
+            let name = document.querySelector('#name'); 
             let email = document.querySelector('#email'); 
-            let password = document.querySelector('#password'); 
             
             // Creating a XHR object 
             let xhr = new XMLHttpRequest(); 
-            let url = "https://jsonplaceholder.typicode.com/users"; 
+            let url = "submit.php"; 
         
             // open a connection 
             xhr.open("POST", url, true); 
@@ -21,17 +20,13 @@ function sendJSON(){
 
                     // Print received data from server 
                     result.innerHTML = this.responseText; 
-                    console.log(this.responseText)
-
 
                 } 
             }; 
 
             // Converting JSON data to string 
-            var data = JSON.stringify( $(form).serializeArray() );
-            console.log(this.data)
+            var data = JSON.stringify({ "name": name.value, "email": email.value }); 
 
             // Sending data with the request 
             xhr.send(data); 
-           
         } 
