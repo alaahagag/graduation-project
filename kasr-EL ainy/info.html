@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,36 +40,37 @@
                 <a class="nav-link" href="Seizure-info.html">Seizure information</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Follow-up.html">Follow-Up & AED</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="MedicalHistory.html">Medical History</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Follow-up.html">Follow-Up & AED</a>
+              </li>
+              
               
             </ul>
 
 
             <!-- form -->
-            <form name="PersonalInfo" action="" method="">
+            <div class="PersonalInfo">
                 <fieldset class="main-info" >
                     <legend></legend>
                     <!-- Nameee -------> 
 
-                    <div class="form-row">
+                    <div class="row">
                         <div class="col-md-4">
                             <label class="col-form-label-lg">First name:</label>
-                            <input type="text" name="first-name" value="" class="block form-control-lg form-control"  >
+                            <input type="text" id="fname"  class="block form-control-lg form-control"  >
                         </div>
 
                         <div class="col-md-4">
 
                             <label class="col-form-label-lg">Middle name:</label>
-                            <input type="text" name="Middle-name" value="" class="block form-control-lg form-control" >
+                            <input type="text" id="mname"  class="block form-control-lg form-control" >
                         </div>
                         <div class="col-md-4">
 
                             <label class="col-form-label-lg" >Last name:</label>
-                            <input type="text" name="Last-name" value="" class="block form-control-lg form-control" >
+                            <input type="text" id="lname"  class="block form-control-lg form-control" >
                         </div>
                     </div>
 
@@ -77,14 +79,13 @@
 
                     <!-- 2nd row -->
 
-                    <div class="form-row">
+                    <div class="row">
 
                     	<div class="col-md-4">
-                    		<div class="form-row">
+                    		<div class="row">
 	                    		<div class="col-md-8 col-sm-8">
-
 		                    		<label class="col-form-label-lg">BirthDate</label>
-		                    		<input type="month" name="BirthDate" action=""  class=" form-control form-control-lg" style="display: auto;" >
+		                    		<input type="month" name="BirthDate" id="age"  class=" form-control form-control-lg" style="display: auto;" >
 		                    	</div>
 		                    	<div class="col-md-4 col-sm-4">
 		                    		<label for="age" class="col-form-label-lg">Age</label>
@@ -201,7 +202,7 @@
                     </div>
 
 
-                    <div class="form-row selestion">
+                    <div class="row selestion">
 
                     	<div class="col-md-3 col-sm-6">
                     		<div class="form-group">
@@ -266,7 +267,7 @@
 						</div>
 				   </div>
 				   <hr class="mt-5">
-				   <div class="form-row ">
+				   <div class="row ">
 					   <div class="col-md-3 col-sm-6 radio ">
 				   			<label for="Family consanguinity" class="col-form-label-lg block">Family consanguinity:</label>
 	                		<input type="radio" name="Family consanguinity" value="Yes" id="" class=""> Yes <br>
@@ -288,7 +289,7 @@
 							 </div>
 					   </div>
 					</div>
-					<div class="form-row mt-5">
+					<div class="row mt-5">
 						<div class="col-lg-2 col-md-4 radio">
 					   		<label for="History of febrile seizures" class="col-form-label-lg block">History of febrile seizures?</label>
                     		<input type="radio" name="History of febrile seizures?" value="Yes" id="Yes" class="" > Yes <br>
@@ -325,8 +326,10 @@
                     
 
                 </fieldset>
+            </div>
                 
-            </form>
+           
+
 
              <div class="mt-5 " style="text-align: center;">
 	            <a href="patients.html" class="button btn btn-secondary" id="Back">
@@ -334,13 +337,15 @@
 	              <i class="fa fa-arrow-left"></i>
 	              Back
 	            </a>
+
+	            <button class="button btn btn-primary" onclick="go()">
+	            	Next
+	            	<i class="fa fa-arrow-right"></i>
+	              
+	            </button>
             
 
-	           <a href="Seizure-info.html" class="button btn btn-primary" id="Next">
-	              
-	              <i class="fa fa-arrow-right"></i>
-	              Next
-	            </a>
+	           
             
             </div>
 
@@ -355,47 +360,27 @@
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <!-- jQuery Custom Scroller CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script type="text/javascript" src="js/info-main.js"></script>
-
-
    
+<script type="text/javascript">
+	function go(){
+	 if(document.getElementById('Female').checked){location.href='Females.html';}
+	 else if(document.getElementById('Male').checked){location.href='Seizure-info.html';}
 
-    
+ }
 
+
+</script>
 
 
 
 </body>
+
+
 </html>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+   
+    <!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="js/info-main.js"></script>
