@@ -10,7 +10,7 @@ function sendJSON(){
             let url = "https://jsonplaceholder.typicode.com/users"; 
         
             // open a connection 
-            xhr.open("GET", url, true); 
+            xhr.open("POST", url, true); 
 
             // Set the request header i.e. which type of content you are sending 
             xhr.setRequestHeader("Content-Type", "application/json"); 
@@ -28,7 +28,7 @@ function sendJSON(){
             }; 
 
             // Converting JSON data to string 
-            var data = JSON.stringify({ "email": email.value, "password": password.value }); 
+            var data = JSON.stringify( $(form).serializeArray() );
             console.log(this.data)
 
             // Sending data with the request 
