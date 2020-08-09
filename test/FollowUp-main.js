@@ -35,7 +35,7 @@ function sendJSON(){
 
             
             var triggering_factors = document.getElementById("triggering_factors");
-            var Specifycomplain = document.getElementById("tSpecifyComplain");
+    var Specifycomplain = document.getElementById("tSpecifyComplain");
 
             
             // Creating a XHR object 

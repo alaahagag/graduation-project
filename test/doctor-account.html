@@ -5,27 +5,91 @@
   JavaScript | Sending JSON data to server. 
   </title> 
 </head> 
+<div class="login">
 
-<body style="text-align:center;" id="body"> 
-  <h1 style="color:green;"> 
-  GeeksForGeeks 
-  </h1> 
+  <h>Login</h>
+  <form id="login_form_id" method="post">
+    <label>Email:</label>
+    <input id="email0" type="email" name="l_email" required>
+    <br>
+    <label>Password:</label>
+    <input id="password0" type="password" name="l_password" required>
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
 
-  <p> 
-    <!-- Making a text input -->
-    <input type="text" id="name" placeholder="Your name"> 
-    <input type="email" id="email" placeholder="Email"> 
-    
-    <!-- Button to send data -->
-    <button onclick="sendJSON()">Send JSON</button> 
+</div>
 
-  <!-- For printing result from server -->
-  <p class="result" style="color:green"></p> 
-  
-</p> 
+<div class="signup">
+  <h>Signup</h>
+  <form id="signup_form_id" method="post">
+    <label>First Name:</label>
+    <input id="fname1" type="text" name="s_fname" required>
+    <br>
+    <label>Last Name:</label>
+    <input id="lname1" type="text" name="s_lname" required>
+    <br>
+    <label>City:</label>
+    <input id="city1" type="text" name="s_city" required>
+    <br>
+    <label>Country:</label>
+    <input id="country1" type="text" name="s_country" required>
+    <br>
+    <label>Male:</label>
+    <input id="gender1" type="radio" name="sex" value="male" required>
+    <br>
+    <label>Female:</label>
+    <input type="radio" name="sex" value="female" required>
+    <br>
+    <label>Email:</label>
+    <input id="email1" type="email" name="s_email" required>
+    <br>
+    <label>Password:</label>
+    <input id="password1" type="password" name="s_password" required>
+    <br>
+    <label>Repeat Pas:</label>
+    <input id="password2" type="password" name="s_rpassword" required>
+    <br>
+    <label></label>
+    <input type="submit" value="Submit">
+  </form>
 
-<!-- Include the JavaScript file -->
-<script src="js/main.js"></script> 
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $('form').on('submit', sign_up_client);
+  function sign_up_client(e) {
+      e.preventDefault();
+      var formJson = [];
+      $(this).find(':input').each(function (index, elem) {
+          var inputType = this.tagName.toUpperCase() === "INPUT" && 
+          var formObj = {}; 
+          if (inputType === "RADIO") {
+              if ($(elem).is(":checked")) {
+                  formObj[$(elem).attr('name')] = $(elem).val();
+                  formJson.push(formObj);
+              }
+          }
+          else if (inputType !== "BUTTON" && inputType !== "SUBMIT")
+              formObj[$(elem).attr('name')] = $(elem).val();
+              formJson.push(formObj);
+          });
+     
+      $.ajax({
+          type: "POST",
+          url: "https://jsonplaceholder.typicode.com/users",
+          data: formJson,
+          dataType: "json",
+          success: function (data) {
+          },
+          error: function () {
+              alert('error handing here');
+          }
+      });
+}
 
+
+</script>
 </body> 
 </html> 

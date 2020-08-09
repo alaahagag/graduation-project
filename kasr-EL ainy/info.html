@@ -101,13 +101,13 @@
                     	<div class="col-md-4">
 
                     		<label for="ID" class="col-form-label-lg">ID no.</label>
-  							<input type="text" id="ID" name="quantity" maxlength="14" minlength="14" class="block form-control-lg form-control">
+  							<input type="text" id="idnum" name="quantity" maxlength="14" minlength="14" class="block form-control-lg form-control">
                     	
                     	</div>	
                     	<div class="col-md-4">
 
                     		<label for="phone" class="col-form-label-lg ">Enter a phone number:</label>
- 							<input type="tel" id="phone" name="phone" class="block form-control-lg form-control" action="" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+ 							<input type="tel" id="pnumber" name="phone" class="block form-control-lg form-control" action="" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
 
                     	</div>
                     </div>
@@ -121,15 +121,15 @@
 
                     	<div class="col-md-3 col-sm-6">
                     		<label for="sex" class="col-form-label-lg block">Sex:</label>
-                    		<input type="radio" name="sex" value="Male" id="Male" class=""> Male <br>
-							<input type="radio" name="sex" value="Female" id="Female"> Female
+                    		<input type="radio" name="sex" value="Male" id="sex" class="Male"> Male <br>
+							<input type="radio" name="sex" value="Female" id="sex" class="Female"> Female
                     	</div>
 
                     	<div class="col-md-3 col-sm-6">
 
                     		<label for="Occupation" class="col-form-label-lg block">Occupation:</label>
-                    		<input type="radio" name="Occupation" value="Not-Working" id="Not-Working" class="" onclick="hide();"> Not Working <br>
-							<input type="radio" name="Occupation" value="Working" id="Working" onclick="show();"> Working
+                    		<input type="radio" name="Occupation" value="Not-Working" id="occupation" class="" onclick="hide();"> Not Working <br>
+							<input type="radio" name="Occupation" value="Working" id=" occupation" onclick="show();"> Working
 							<!-- textarea will open if working is choosen --> 
 
 							<TEXTAREA id="Specify-working" style="display: none; margin:10px;" NAME="data" ROWS=3 COLS=30 placeholder="Specify" ></TEXTAREA> 
@@ -139,14 +139,14 @@
 
                     	<div class="col-md-3 col-sm-6">
                     		<label for="Driving" class="col-form-label-lg block">Active Driving?</label>
-                    		<input type="radio" name="Driving" value="Yes"  class=""> Yes <br>
-							<input type="radio" name="Driving" value="No" > No
+                    		<input type="radio" name="Driving" value="yes" id="activedriving"  > Yes <br>
+							<input type="radio" name="Driving"  value="no" id="activedriving" > No
                     	</div>
 
                     	<div class="col-md-3 col-sm-6">
                     		<label for="Handedness" class="col-form-label-lg block">Handedness? <span>Both is Available</span></label>
-                    		<input type="radio" name="Right-hand" value="Right"  id="Handedness"> Right <br>
-							<input type="radio" name="Left-hand" value="Left" id="Handedness"> Left
+                    		<input type="radio" name="hand" value="Right"  id="handedness"> Right <br>
+							<input type="radio" name="hand" value="Left" id="handedness"> Left
                     	</div>
 
 
@@ -161,11 +161,11 @@
                     	<div class="col-md-3 col-sm-6">
                     		<div class="form-group">
 							    <label for="Marital status " class="col-form-label-lg">Marital status</label>
-							    <select class="form-control" id="Marital status">
-							      <option>Single</option>
-							      <option>Married</option>
-							      <option>Divorced</option>
-							      <option>Widow</option>
+							    <select class="form-control" id="maritalstatus" name="Marital-status">
+							      <option value="Single" >Single</option>
+							      <option value="Married">Married</option>
+							      <option value="Divorced">Divorced</option>
+							      <option value="Widow">Widow</option>
 							      
 							    </select>
 							 </div>
@@ -174,13 +174,13 @@
                     	<div class="col-md-3 col-sm-6">
                     		<div class="form-group">
 							    <label for=" Education " class="col-form-label-lg">Education</label>
-							    <select class="form-control" id="Education">
-							      <option>Illiterate</option>
-							      <option>Reads & writes</option>
-							      <option>1r</option>
-							      <option>Prep</option>
-							      <option>2ry</option>
-							      <option>University</option>
+							    <select class="form-control" id="education" name="Educationstatus">
+							      <option value="Illiterate">Illiterate</option>
+							      <option value="Reads & writes">Reads & writes</option>
+							      <option value="1r">1r</option>
+							      <option value="Prep">Prep</option>
+							      <option value="2ry">2ry</option>
+							      <option value="University">University</option>
 							      
 							    </select>
 							 </div>
@@ -190,12 +190,12 @@
 						<div class="col-md-6">
                     		<div class="form-group">
 							    <label for=" Special Habits " class="col-form-label-lg">Special Habits of medical importance</label>
-							    <select class="form-control" id="Special Habits">
-							      <option>Smoking</option>
-							      <option>Drug abuse</option>
-							      <option>tramadol</option>
-							      <option>Alcohol</option>
-							      <option>none</option>
+							    <select class="form-control" id="habitnames" name="Special-Habits">
+							      <option value="Smoking">Smoking</option>
+							      <option value="Drug abuse">Drug abuse</option>
+							      <option value="tramadol">tramadol</option>
+							      <option value="Alcohol">Alcohol</option>
+							      <option value="none">none</option>
 							    </select>
 							 </div>
 						</div>
@@ -208,23 +208,23 @@
                     		<div class="form-group">
 							    <label for="Comorbidities " class="col-form-label-lg">Comorbidities</label>
 							    <!-- Multiple selection -->
-							    <select class="form-control" id="Comorbidities" multiple="multiple" style="overflow-x: auto; height: 185px;"  onchange="javascript: showhide();">
+							    <select class="form-control" id="cname" name="Comorbidities" multiple="multiple" style="overflow-x: auto; height: 185px;"  onchange="javascript: showhide();">
 							    	<optgroup label="Press Ctrl to select more">
 							      
-								      <option>DM</option>
-								      <option>HTN</option>
-								      <option>Renal</option>
-								      <option>Hepatic</option>
-								      <option>Cardiac</option>
-								      <option>Cognitive Neurological impairment Psychiatric</option>
-								      <option>Anemia</option>
-								      <option>Collagen vascular</option>
-								      <option>Organ transplant</option>
-								      <option>Peptic ulcer</option>
-								      <option>Asthma</option>
-								      <option>Migraine</option>
-								      <option>Nocturnal enuresis</option>
-								      <option>Malignancies</option>
+								      <option value="DM">DM</option>
+								      <option value="HTN">HTN</option>
+								      <option value="Renal">Renal</option>
+								      <option value="Hepatic">Hepatic</option>
+								      <option value="Cardiac">Cardiac</option>
+								      <option value="Cognitive Neurological">Cognitive Neurological impairment Psychiatric</option>
+								      <option value="Anemia">Anemia</option>
+								      <option value="Collagen vascular">Collagen vascular</option>
+								      <option value="Organ transplant">Organ transplant</option>
+								      <option value="Peptic ulcer">Peptic ulcer</option>
+								      <option value="Asthma">Asthma</option>
+								      <option value="Migraine">Migraine</option>
+								      <option value="Nocturnal enuresis">Nocturnal enuresis</option>
+								      <option value="Malignancies">Malignancies</option>
 								      <option value="Other">Other,Specify below</option>
 								  </optgroup>
 							      
@@ -236,19 +236,19 @@
                     	<div class="col-md-3 col-sm-6">
                     		<div class="form-group">
 							    <label for="Past History" class="col-form-label-lg">Past History</label>
-							    <select class="form-control" id="Past-History" multiple="multiple" style="overflow-x: auto; height: 185px;"  onchange="javascript: showhide();">
+							    <select class="form-control" id="pasthistory" multiple="multiple" style="overflow-x: auto; height: 185px;"  onchange="javascript: showhide();" name="past-history">
 							      <optgroup label="Press Ctrl to select more">
-								      <option>Perinatal insult</option>
-								      <option>Birth injury/option>
-								      <option>Hypoxia</option>
-								      <option>Kernicterus</option>
-								      <option>Neonatal infection</option>
-								      <option>Traumatic</option>
-								      <option>Vascular</option>
-								      <option>CNS Infection</option>
-								      <option>Neoplasm</option>
-								      <option>Cortical malformations</option>
-								      <option>Tuberous sclerosis</option>
+								      <option value="Perinatal insult">Perinatal insult</option>
+								      <option value="Birth injury">Birth injury</option>
+								      <option value="Hypoxia">Hypoxia</option>
+								      <option value="Kernicterus">Kernicterus</option>
+								      <option value="Neonatal infection">Neonatal infection</option>
+								      <option value="Traumatic">Traumatic</option>
+								      <option value="Vascular">Vascular</option>
+								      <option value="CNS Infection">CNS Infection</option>
+								      <option value="Neoplasm">Neoplasm</option>
+								      <option value="Cortical malformations">Cortical malformations</option>
+								      <option value="Tuberous sclerosis">Tuberous sclerosis</option>
 								      <option value="Other">Other , Specify below</option><!-- open textarea -->
 							      </optgroup>
 							    </select>
@@ -261,7 +261,7 @@
 						<div class="col-md-6">
                     		 <div class="form-group">
 							    <label for="Concomitant Medications" class="col-form-label-lg">Concomitant Medications:</label>
-							    <textarea class="form-control" id="Concomitant Medications" rows="7" placeholder="List your Medications..."></textarea>
+							    <textarea class="form-control" id="medications" rows="7" placeholder="List your Medications..."></textarea>
 
 							  </div>
 						</div>
@@ -270,21 +270,21 @@
 				   <div class="row ">
 					   <div class="col-md-3 col-sm-6 radio ">
 				   			<label for="Family consanguinity" class="col-form-label-lg block">Family consanguinity:</label>
-	                		<input type="radio" name="Family consanguinity" value="Yes" id="" class=""> Yes <br>
-							<input type="radio" name="Family consanguinity" value="No" id=""> No
+	                		<input type="radio" value="yes" name="Family-consanguinity"  id="familyConsanguinity" > Yes <br>
+							<input type="radio" value="no" name="Family-consanguinity"  id="familyConsanguinity"> No
 					   </div>
 
 
 					   <div class="col-md-3 col-sm-6 radio">
 				   			<label for="Similar condition" class="col-form-label-lg block">Similar condition in family:</label>
-	                		<input type="radio" name="Similar condition" value="Yes" id="" class=""> Yes <br>
-							<input type="radio" name="Similar condition" value="No" id=""> No
+	                		<input type="radio" name="Similar-condition" value="Yes" id="familycondition" class=""> Yes <br>
+							<input type="radio" name="Similar-condition" value="No" id="familycondition"> No
 					   </div>
 
 					   <div class="col-lg-6 col-md-6">
 					   		<div class="form-group">
 							    <label for="Relatives" class="col-form-label-lg">Relatives with other neurological condition?</label>
-							    <textarea class="form-control" id="Relatives" rows="4" placeholder="Specify here..."></textarea>
+							    <textarea class="form-control" id="neurologicalcondition" rows="4" placeholder="Specify here..."></textarea>
 
 							 </div>
 					   </div>
@@ -292,8 +292,8 @@
 					<div class="row mt-5">
 						<div class="col-lg-2 col-md-4 radio">
 					   		<label for="History of febrile seizures" class="col-form-label-lg block">History of febrile seizures?</label>
-                    		<input type="radio" name="History of febrile seizures?" value="Yes" id="Yes" class="" > Yes <br>
-							<input type="radio" name="History of febrile seizures?" value="No" id="No" > No
+                    		<input type="radio" value="yes" name="febrile-history"  id="fabrile" class="" > Yes <br>
+							<input type="radio" value="no" name="febrile-history"  id="fabrile" > No
 							
 					   	
 					   </div>
@@ -301,7 +301,7 @@
 					   <div class="col-lg-5 col-md-4">
 					   		<div class="form-group">
 							    <label for="febrile seizures" class="col-form-label-lg">Describe febrile seizures if present:</label>
-							    <textarea class="form-control" id="febrile seizures" rows="4"  placeholder="Specify here if present..." ></textarea>
+							    <textarea class="form-control" id="describefebrile" rows="4"  placeholder="Specify here if present..." ></textarea>
 
 
 
@@ -312,7 +312,7 @@
 					   	   <div class="form-group">
 
 							    <label for="age of onset" class="col-form-label-lg">Age of Onset of febrile Seizures </label>
-							    <textarea class="form-control" id="age-of-onset" rows="4" placeholder="Specify here if present..." ></textarea>
+							    <textarea class="form-control" id="ageofonset" rows="4" placeholder="Specify here if present..." ></textarea>
 
 							</div>
                     		
@@ -332,6 +332,8 @@
 
 
              <div class="mt-5 " style="text-align: center;">
+
+             	<a href="#" class=" button btn btn-success save "  onclick="sendJSON()">Save</a><br>
 	            <a href="patients.html" class="button btn btn-secondary" id="Back">
 	              
 	              <i class="fa fa-arrow-left"></i>
@@ -350,9 +352,6 @@
             </div>
 
 
-            
-
-
             <!--form/-->
             
         </div>
@@ -360,20 +359,8 @@
     </div>
 
 
-   
-<script type="text/javascript">
-	function go(){
-	 if(document.getElementById('Female').checked){location.href='Females.html';}
-	 else if(document.getElementById('Male').checked){location.href='Seizure-info.html';}
-
- }
-
-
-</script>
-
-
-
 </body>
+
 
 
 </html>
@@ -383,4 +370,6 @@
     <!-- Bootstrap JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
+<script type="text/javascript" src="js/data-main.js"></script>
 <script type="text/javascript" src="js/info-main.js"></script>
+

@@ -64,6 +64,7 @@
                   <label for="" class="col-form-label-lg block">Was there are seizures since the last visit?</label>
                   <input type="radio" name="LastVisit" value="Yes" id="last_visit_seizure" class="" onclick="show();"> Yes <br>
                   <input type="radio" name="LastVisit" value="No" id="last_visit_seizure" onclick="hide();"> No
+                </div>
 
                   <div id="Specify-freq" style="display: none; margin: 10px;">
                     <label class="col-form-label-lg">what are their frequency per month?</label>
@@ -77,20 +78,20 @@
               <div class="row " style="margin-top: 15px;">
                 <div class="col-md-4  radio">
                   <label for="" class="col-form-label-lg block">Is the patient compliant on AED?</label>
-                  <input type="radio" name="AEDcomplaint"  id="compliant_on_AED" value="yes" onclick="AEDshow();"> Yes <br>
-                  <input type="radio" name="AEDcomplaint"  id="compliant_on_AED" value="no" onclick="AEDhide();"> No
+                  <input type="radio" name="AEDcomplaint"  id="compliant_on_AED" value="yes" class="" onclick="AEDshow();"> Yes <br>
+                  <input type="radio" name="AEDcomplaint"  id="compliant_on_AED"  value="no" onclick="AEDhide();"> No
                   <textarea id="SpecifyComplain" style="display: none; margin: 10px; " placeholder="What Complain ?" class="form-control"></textarea>
                   
                </div>
 
                <div class="col-md-4  radio">
                   <label for="" class="col-form-label-lg block">Is it the same seizure type?</label>
-                  <input type="radio" name="Type" value="Yes" id="same_seizure_type" class=""> Yes <br>
+                  <input type="radio" name="Type" value="Yes" id="same_seizure_type"  class=""> Yes <br>
                   <input type="radio" name="Type" value="No" id="same_seizure_type" > No    
                </div>
 
                <div class="col-md-4">
-                <textarea class="form-control" id="typeArea" placeholder="What Type ?" rows="4" cols="5" style="margin-top: 10px;"></textarea>
+                <textarea id="typeArea" class="form-control" placeholder="What Type ?" rows="4" cols="5" style="margin-top: 10px;"></textarea>
                  
                </div>   
               </div>
@@ -100,17 +101,17 @@
               <div class="row radio check">
                 <div class="col-md-6">
                   <label for="" class="col-form-label-lg block">Identified triggering factors: <span> More than choice is avaliable</span></label>
-                  <input type="checkbox" name="" value="Missed doses" id="triggering_factors" class=""> Missed doses 
-                  <input type="checkbox" name="trigger" value="Hyperventilation" id="triggering_factors" > Hyperventilation 
-                  <input type="checkbox" name="trigger" value="Sleep" id="triggering_factors" > Sleep 
-                  <input type="checkbox" name="trigger" value="Deprivation" id="triggering_factors" > Deprivation <br>
-                  <input type="checkbox" name="trigger" value="Emotional Stress" id="triggering_factors" > Emotional Stress 
-                  <input type="checkbox" name="trigger" value="Physical stress" id="triggering_factors" > Physical stress   
-                  <input type="checkbox" name="trigger" value="Drugs" id="triggering_factors" > Drugs  
-                  <input type="checkbox" name="trigger" value="Menses" id="triggering_factors" > Menses <br>
-                  <input type="checkbox" name="trigger" value="Fever illness" id="triggering_factors" > Fever illness 
-                  <input type="checkbox" name="trigger" value="Others" id="triggering_factors" > Others 
-                  <input type="checkbox" name="trigger" value="None" id="triggering_factors" > None       
+                  <input type="checkbox" name="trigger" value="Missed doses" id="triggering_factors" class=""> Missed doses
+                  <input type="checkbox" name="trigger" value="Hyperventilation" id="triggering_factors" > Hyperventilation
+                  <input type="checkbox" name="trigger" value="Sleep" id="triggering_factors" > Sleep
+                  <input type="checkbox" name="trigger" value=" Deprivation" id="triggering_factors" > Deprivation <br>
+                  <input type="checkbox" name="trigger" value="Emotional Stress" id="triggering_factors" > Emotional Stress
+                  <input type="checkbox" name="trigger" value="Physical stress" id="triggering_factors" > Physical stress
+                  <input type="checkbox" name="trigger" value="Drugs" id="triggering_factors" > Drugs
+                  <input type="checkbox" name="trigger" value=" Menses" id="triggering_factors" > Menses <br>
+                  <input type="checkbox" name="trigger" value="Fever illness" id="triggering_factors" > Fever illness
+                  <input type="checkbox" name="trigger" value="Others" id="triggering_factors" > Others
+                  <input type="checkbox" name="trigger" value=" None" id="triggering_factors" > None
                 </div>
                 
               </div>
@@ -120,19 +121,21 @@
               <div class="row radio">
                 <div class="col-md-4 col-sm-6 ">
                   <label for="" class="col-form-label-lg block">Will AED be modified?</label>
-                  <input type="radio" name="AED" value="Yes" id="aed_modifing" > Yes <br>
-                  <input type="radio" name="AED" value="Yes" id="aed_modifing" > No   
+                  <input type="radio" name="AED" value="Yes" id="aed_modifing" class=""> Yes <br>
+                  <input type="radio" name="AED" value="No" id="aed_modifing" class=""> No
                 </div>
 
                 <div class="col-md-4 col-sm-6">
                   <label class="col-form-label-lg block">Specify?</label>
-                  <textarea class="form-control" cols="5" rows="3" id="aedM"></textarea>
+                  <textarea id="aedM" class="form-control" cols="5" rows="3"></textarea>
                   
                 </div>
                 
               </div>
               
             </fieldset>
+
+            <!-- end follow up -->
 
             <fieldset class="main-info ">
               <legend class="FollowUpLegand">AED</legend>
@@ -242,7 +245,6 @@
 
 
 
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
    
@@ -256,12 +258,20 @@
      function hide() { document.getElementById('Specify-freq').style.display = 'none'; }
 
 
-     function AEDshow() { document.getElementById('Specify-complain').style.display = 'block'; }
-     function AEDhide() { document.getElementById('Specify-complain').style.display = 'none'; }
+     function AEDshow() { document.getElementById('SpecifyComplain').style.display = 'block'; }
+     function AEDhide() { document.getElementById('SpecifyComplain').style.display = 'none'; }
 
     </script>
 
-   
+    <script type="text/javascript">
+      function onSubmit( form ){
+        var data = JSON.stringify( $(form).serializeArray() ); //  <-----------
+
+          console.log( data );
+          return false; //don't submit
+        }
+
+    </script>
 
 
    
