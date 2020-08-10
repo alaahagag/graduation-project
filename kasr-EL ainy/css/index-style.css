@@ -7,7 +7,9 @@ body {
     padding: 0;
     font-family: arial;
     background-color: #F0F0ED;
-    width: 1340px 
+    width: 1340px ;
+
+
 }
 
 /* Start Part 1 */
@@ -79,6 +81,15 @@ body {
     margin-bottom: 20px;
     border-radius: 8px;
     background-color: #FFF;
+    overflow: hidden;
+
+}
+.part2 .AddPatient p
+{
+    display: inline;
+    font-weight: bold;
+    font-size: 30px;
+    color: #dc3545;
 }
 
 
