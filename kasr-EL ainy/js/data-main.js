@@ -19,7 +19,9 @@ function sendJSON(){
     var lname =  document.getElementById("lname");
     var age =  document.getElementById("age");
     var idnum =  document.getElementById("idnum");
-    var pnumber =  document.getElementById("pnumber");
+    var age_of_onset =  document.getElementById("age_of_onset");
+    
+
 
     // for textarea 
     var SpecifyWorking =  document.getElementById("Specify-working");
@@ -32,17 +34,22 @@ function sendJSON(){
      var education =document.querySelector('#education'); 
      var maritalstatus =document.querySelector('#maritalstatus'); 
      var habitnames =document.querySelector('#habitnames'); 
+     var mode =document.querySelector('#mode'); 
+     var classification =document.querySelector('#classification'); 
+
+
+
 
      // for multi-dropdown list 
 
-      var comor =  document.getElementById("cname");
-	  var cname = "";
-	  for (var option of comor.options) {
-	    if (option.cname) {
-	      cname.push(option.value);
-	    }
-	  }
-	  alert(cname);
+      //var comor =  document.getElementById("cname");
+	  //var cname = "";
+	  //for (var option of comor.options) {
+	    //if (option.cname) {
+	      //cname.push(option.value);
+	    //}
+	  //}
+	 // alert(cname);
 	 
 	
 
@@ -87,7 +94,8 @@ function sendJSON(){
                 "activedriving":activedriving.value, "handedness":handedness.value,
                 "familyConsanguinity":familyConsanguinity.value , "familycondition":familycondition.value
                 ,"fabrile":fabrile.value , "education":education.value , "maritalstatus":maritalstatus.value
-                ,"habitnames":habitnames.value , "Comorbidities":cname
+                ,"habitnames":habitnames.value ,
+                "Seizure":{"age_of_onset" : age_of_onset.value , "mode":mode.value , "classification":classification.value}
 
              });
 
