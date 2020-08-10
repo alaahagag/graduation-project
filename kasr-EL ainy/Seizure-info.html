@@ -59,17 +59,17 @@
                   <div class="row">
                     <div class="col-md-3 col-sm-6">
                       <label class="col-form-label-lg">Age of Onset:</label>
-                      <input type="text" name="AgeOfOnset" value="" class="form-control-lg form-control">
+                      <input type="text" name="AgeOfOnset" id="age_of_onset" class="form-control-lg form-control">
                     </div>
 
 
                      <div class="col-md-3 col-sm-6">
                         <div class="form-group ">
                           <label for="Mode of onset" class="col-form-label-lg">Mode of Onset</label>
-                          <select class="form-control form-control-lg selection" id="ModeOfOnset"> 
-                            <option>Focal Onset</option>
-                            <option>Generalized</option>
-                            <option>Unknown</option>
+                          <select class="form-control form-control-lg selection" id="mode"> 
+                            <option value="Focal Onset">Focal Onset</option>
+                            <option value="Generalized">Generalized</option>
+                            <option value="Unknown">Unknown</option>
                             </select>
                           </div>
                       </div>
@@ -77,12 +77,12 @@
                       <div class="col-md-3 col-sm-6">
                         <div class="form-group ">
                           <label for="Classification" class="col-form-label-lg">Classification</label>
-                            <select class="form-control form-control-lg selection" id="Classification">
-                            <option>Focal aware</option>
-                            <option>Focal impaired awareness</option>
-                            <option>Focal to bilateral</option>
-                            <option>tonic-clonic</option>
-                            <option>Generalized</option>
+                            <select class="form-control form-control-lg selection" id="classification">
+                            <option value="Focal aware">Focal aware</option>
+                            <option value="Focal impaired awareness">Focal impaired awareness</option>
+                            <option value="Focal to bilateral">Focal to bilateral</option>
+                            <option value="tonic-clonic">tonic-clonic</option>
+                            <option value="Generalized">Generalized</option>
                             </select>
                           </div>
                       </div>
@@ -90,14 +90,14 @@
                       <div class="col-md-3 col-sm-6 ">
                         <div class="form-group ">
                           <label for="FocalMotorOnset" class="col-form-label-lg">Focal motor onset</label>
-                          <select class="form-control form-control-lg selection" id="FocalMotorOnset">
-                            <option>Automatism</option>
-                            <option>Hyperkinetic</option>
-                            <option>Tonic</option>
-                            <option>Clonic</option>
-                            <option>Myoclonic </option>
-                            <option>Atonic </option>
-                            <option>Epileptic spasm </option>
+                          <select class="form-control form-control-lg selection" id="fmname">
+                            <option value="Automatism">Automatism</option>
+                            <option value="Hyperkinetic">Hyperkinetic</option>
+                            <option value="Tonic">Tonic</option>
+                            <option value="Clonic">Clonic</option>
+                            <option value="Myoclonic">Myoclonic </option>
+                            <option value="Atonic">Atonic </option>
+                            <option value="Epileptic spasm">Epileptic spasm </option>
 
                             </select>
                           </div>
@@ -110,31 +110,31 @@
                       <div class="form-group">
                         <label for="FocalNon-motor " class="col-form-label-lg">Focal Non-motor(Aura)</label>
                         <!-- Multiple selection -->
-                        <select class="form-control" id="FocalNon-motor" multiple="multiple" style="overflow-x: auto; height: 185px;">
+                        <select class="form-control" id="fnmname" multiple="multiple" style="overflow-x: auto; height: 185px;">
                           <optgroup label="Press Ctrl to select more..">
 
                             <optgroup label="1.Autonomic">
-                              <option>CVS</option>
-                              <option>GIT</option>
-                              <option>GNU</option>
-                              <option>CUT</option>
-                              <option>RESP</option>
+                              <option value="CVS">CVS</option>
+                              <option value="GIT">GIT</option>
+                              <option value="GNU">GNU</option>
+                              <option value="CUT">CUT</option>
+                              <option value="RESP">RESP</option>
                             </optgroup>
                             <optgroup label="2.Behavioral arrest Psychic phenomena">
-                              <option>déjà vu or jamais vu</option>
-                              <option>depersonalization</option>
-                              <option>derealization</option>
+                              <option value="déjà vu or jamais vu">déjà vu or jamais vu</option>
+                              <option value="depersonalization">depersonalization</option>
+                              <option value="derealization">derealization</option>
                             </optgroup>
                             <optgroup label="3.Emotional">
-                              <option>Fear or anxiety</option>
-                              <option>dissociation</option>
+                              <option value="Fear or anxiety">Fear or anxiety</option>
+                              <option value="dissociation">dissociation</option>
                             </optgroup>
-                            <option>4.Cognitive</option>
+                            <option value="Cognitive">4.Cognitive</option>
                             <optgroup label="5.Somatosensory">
-                              <option>sensory</option>
-                              <option>elementary</option>
-                              <option>Olfactory gustatoryv</option>
-                              <option>Auditory)</option>
+                              <option value="sensory">sensory</option>
+                              <option value="elementary">elementary</option>
+                              <option value="Olfactory gustatory">Olfactory gustatory</option>
+                              <option value="Auditory">Auditory</option>
                             </optgroup>
                             
                             
@@ -147,14 +147,14 @@
                   <div class="form-group">
                     <label for="Generalized-motor " class="col-form-label-lg">Generalized motor onset</label>
                     <!-- Multiple selection -->
-                    <select class="form-control" id="Generalized-motor" multiple="multiple" style="overflow-x: auto; height: 185px;">
+                    <select class="form-control" id="gmname" multiple="multiple" style="overflow-x: auto; height: 185px;">
                       <optgroup label="Press Ctrl to select more..">
-                        <option>TCS</option>
-                        <option>Tonic</option>
-                        <option>Clonic</option>
-                        <option>Myoclonic</option>
-                        <option>Atonic</option>
-                        <option>Epileptic spasm</option>
+                        <option value="TCS">TCS</option>
+                        <option value="Tonic">Tonic</option>
+                        <option value="Tonic">Tonic</option>
+                        <option value="Myoclonic">Myoclonic</option>
+                        <option value="Atonic">Atonic</option>
+                        <option value="Epileptic spasm">Epileptic spasm</option>
                       </optgroup>
                     </select>
                   </div>
@@ -163,15 +163,15 @@
 
                 <div class="col-md-3 col-sm-6">
                   <div class="form-group">
-                    <label for="Generalized-NonMotor " class="col-form-label-lg">Generalized non-motor onset</label>
+                    <label for="Generalized-NonMotor " class="col-form-label-lg">Generalized non-motor </label>
                     <!-- Multiple selection -->
-                    <select class="form-control" id="Generalized-NonMotor" multiple="multiple" style="overflow-x: auto; height: 185px;">
+                    <select class="form-control" id="gnname" multiple="multiple" style="overflow-x: auto; height: 185px;">
                       <optgroup label="Press Ctrl to select more..">
-                        <option>Typical</option>
-                        <option>Atypica</option>
-                        <option>Myoclonic</option>
-                        <option>Eyelid</option>
-                        <option>myoclonia</option>
+                        <option value="Typical">Typical</option>
+                        <option value="Atypica">Atypica</option>
+                        <option value="Myoclonic">Myoclonic</option>
+                        <option value="Eyelid">Eyelid</option>
+                        <option value="myoclonia">myoclonia</option>
         
                       </optgroup>
                     </select>
@@ -182,7 +182,7 @@
                  <div class="form-group">
 
                   <label for="Semiology" class="col-form-label-lg">Semiology:</label>
-                  <textarea class="form-control" id="Semiology" rows="7" placeholder="symptoms during the seizure..." ></textarea>
+                  <textarea class="form-control" id="Ssemiology" rows="7" placeholder="symptoms during the seizure..." ></textarea>
 
               </div>
                         
@@ -197,14 +197,14 @@
                 <div class="col-md-4 col-sm-4">
                   <div class="form-group ">
                     <label for="Associated-features" class="col-form-label-lg">Associated features:</label>
-                    <select class="form-control form-control-lg " id="Associated-features" multiple="multiple" style="overflow-x: auto; height: 185px;"> 
+                    <select class="form-control form-control-lg " id="afname" multiple="multiple" style="overflow-x: auto; height: 185px;"> 
                       <optgroup label="Press Ctrl to select more ..">
-                        <option>Rolling eyes</option>
-                        <option>Tongue biting</option>
-                        <option>Frothing</option>
-                        <option>Cyanosis</option>
-                        <option>Incontinence</option>
-                        <option>Self trauma</option>
+                        <option value="Rolling eyes">Rolling eyes</option>
+                        <option value="Tongue biting">Tongue biting</option>
+                        <option value="Frothing">Frothing</option>
+                        <option value="Cyanosis">Cyanosis</option>
+                        <option value="Incontinence">Incontinence</option>
+                        <option value="Self trauma">Self trauma</option>
                       </optgroup>
                       </select>
                     </div>
@@ -218,7 +218,7 @@
                 <div class="col-md-5 col-sm-4" style="margin-top:50px; ">
                   <div class="form-group">
                     <label for="Specify-features" class="col-form-label-lg"></label>
-                    <textarea class="form-control" id="Specify-features" rows="4" placeholder="Specify here..." ></textarea>
+                    <textarea class="form-control" id="Specifyfeatures" rows="4" placeholder="Specify here..." ></textarea>
 
                   </div>
                 </div>
@@ -231,14 +231,14 @@
 
                 <div class="col-md-6 col-sm-6">
                   <label for="" class="col-form-label-lg block">Is the Order of Symptom Appearence konwn?</label>
-                  <input type="radio" name="OrderSymptom" value="Male" id="Yes" class=""> Yes <br>
-                  <input type="radio" name="OrderSymptom" value="Female" id="No"> No
+                  <input type="radio" name="OrderSymptom" value="Yes" id="symptom_appearance" class=""> Yes <br>
+                  <input type="radio" name="OrderSymptom" value="No" id="symptom_appearance"> No
                 </div>
 
                 <div class="col-md-4 col-sm-6">
                   <label for="NumberOfSeizure" class="col-form-label-lg block">Number of seizure types?</label>
-                  <input type="radio" name="NumberOfSeizure" value="Male" id="Single" class=""> Single <br>
-                  <input type="radio" name="NumberOfSeizure" value="Female" id="multiple"> multiple
+                  <input type="radio" name="NumberOfSeizure" value="Yes" id="number" class=""> Single <br>
+                  <input type="radio" name="NumberOfSeizure" value="no" id="number"> multiple
                 </div>
 
               </div>
@@ -247,17 +247,28 @@
               <div class="row">
                 <div class="col-md-4 col-sm-6 selestion">
                   <label class="col-form-label-lg">Duration of the seizure:</label>
-                  <input type="text" name="SeizureDuration" value="" class="form-control-lg form-control ">
+                  <input type="text" name="SeizureDuration" id="duration" class="form-control-lg form-control ">
                 </div>
             
 
                 <div class="col-md-4 col-sm-6">
                   <div class="form-group selestion ">
-                    <label for="Post-ictal" class="col-form-label-lg">Post ictal</label>
-                    <select class="form-control form-control-lg selection " id="Post-ictal"> 
-                      <option>Nose whipping</option>
-                      <option>Lateralizing</option>
-                      <option>Cough</option>
+                    <label for="Post-ictal" class="col-form-label-lg">Postictal</label>
+                    <select class="form-control form-control-lg selection " id="Postictal"> 
+                      <option value="Nose whipping ">Nose whipping</option>
+                      <option value="Lateralizing">Lateralizing</option>
+                      <option value="Cough">Cough</option>
+                      <option value="Facial asymm (Todd's paresis)">Facial asymm (Todd's paresis)</option>
+                      <option value="speech preservation">speech preservation</option>
+                      <option value="Aphasia">Aphasia</option>
+                      <option value="Vomiting">Vomiting</option>
+                      <option value="Crying">Crying</option>
+                      <option value="Drowsiness">Drowsiness</option>
+                      <option value="Amnesia">Amnesia</option>
+                      <option value="Impaired cognition">Impaired cognition</option>
+                      <option value="Headache">Headache</option>
+                      <option value="Psychosis">Psychosis</option>
+                      <option value="Others">Others specify:</option>
                       </select>
                     </div>  
                 </div>
@@ -271,11 +282,11 @@
                   <div class="form-group">
                     <label for="CircadianRhythm" class="col-form-label-lg">Circadian Rhythm</label>
                     <!-- Multiple selection -->
-                    <select class="form-control" id="CircadianRhythm" multiple="multiple" style="overflow-x: auto; height: 185px;">
+                    <select class="form-control" id="circadianRhythm" multiple="multiple" style="overflow-x: auto; height: 185px;">
                       <optgroup label="Press Ctrl to select more..">
-                        <option>Diurnal</option>
-                        <option>During sleep only</option>
-                        <option>On awakening</option>
+                        <option value="Diurnal">Diurnal</option>
+                        <option value="During sleep only">During sleep only</option>
+                        <option value="On awakening">On awakening</option>
                       </optgroup>
                     </select>
                   </div>
@@ -288,56 +299,30 @@
                   <div class="form-group">
                     <label for="TriggerType" class="col-form-label-lg">Trigger Type</label>
                     <!-- Multiple selection -->
-                    <select class="form-control" id="TriggerType" multiple="multiple" style="overflow-x: auto; height: 185px;">
+                    <select class="form-control" id="triggertype" multiple="multiple" style="overflow-x: auto; height: 185px;">
                       <optgroup label="Press Ctrl to select more..">
-                        <option>Reflexive</option>
-                        <option>Special Stimulus</option>
-                        <option>Photic(Light flashes, TV Computer Video games)</option>
-                        <option>Sound</option>
-                        <option>Tactile</option>
-                        <option>Hyperventilation</option>
-                        <option>Sleep</option>
-                        <option>Deprivation</option>
-                        <option>Emotional Stress</option>
-                        <option>Physical stress</option>
-                        <option>Fever illness</option>
-                        <option>Menses</option>
-                        <option>Drugs</option>
-                        <option>Others</option>
-                        <option>None</option>
+                        <option value="Reflexive">Reflexive</option>
+                        <option value="Special Stimulus">Special Stimulus</option>
+                        <option value="Photic(Light flashes, TV Computer Video games)">Photic(Light flashes, TV Computer Video games)</option>
+                        <option value="Sound">Sound</option>
+                        <option value="Tactile">Tactile</option>
+                        <option value="Hyperventilation">Hyperventilation</option>
+                        <option value="Sleep">Sleep</option>
+                        <option value="Deprivation">Deprivation</option>
+                        <option value="Emotional Stress">Emotional Stress</option>
+                        <option value="Physical stress">Physical stress</option>
+                        <option value="Fever illness">Fever illness</option>
+                        <option value="Menses">Menses</option>
+                        <option value="Drugs">Drugs</option>
+                        <option value="Others">Others</option>
+                        <option value="None">None</option>
                       </optgroup>
                     </select>
                   </div>
                   
                 </div>
 
-                <div class="col-md-4 col-sm-6">
-                  <div class="form-group">
-                    <label for="Post-ictal: " class="col-form-label-lg">Post ictal</label>
-                    <!-- Multiple selection -->
-                    <select class="form-control" id="Post-ictal" multiple="multiple" style="overflow-x: auto; height: 185px; ">
-                      <optgroup label="Press Ctrl to select more..">
-                      
-                        <option>Lateralizing</option>
-                        <option>Nose whipping</option>
-                        <option>Cough</option>
-                        <option>Facial asymm (Todd's paresis)</option>
-                        <option>speech preservation</option>
-                        <option>Aphasia</option>
-                        <option>Vomiting</option>
-                        <option>Crying</option>
-                        <option>Drowsiness</option>
-                        <option>Amnesia</option>
-                        <option>Impaired cognition</option>
-                        <option>Headache</option>
-                        <option>Psychosis</option>
-                        <option>Others specify:</option>
-                      </optgroup>
-                     
-                    </select>
-                  </div>
-                  
-                </div>
+                
                 
               </div>
 
@@ -345,12 +330,12 @@
               <div class="row">
                 <div class="col-md-5 col-sm-6">
                   <label class="col-form-label-lg">Frequency per month at the onset before AED:</label>
-                  <input type="text" name="FrequencyBefore" value="" class="form-control-lg form-control">
+                  <input type="text" name="FrequencyBefore" id="frequency_before_AED" class="form-control-lg form-control">
                </div>
 
                <div class="col-md-4 col-sm-6 ">
                   <label class="col-form-label-lg">FrequencyAfter per month after AED:</label>
-                  <input type="text" name="Frequency" value="" class="form-control-lg form-control">
+                  <input type="text" name="Frequency" id="frequency_after_AED" class="form-control-lg form-control">
                </div>
 
 
@@ -359,7 +344,7 @@
 
                <div class="col-md-4 col-sm-6 ">
                     <label class="col-form-label-lg">Longest seizure free period:</label>
-                    <input type="text" name="seizureFreePeriod" value="" class="form-control-lg form-control">
+                    <input type="text" name="seizureFreePeriod" id="longest_period" class="form-control-lg form-control">
                </div>
              </div>
 
@@ -378,15 +363,15 @@
                   <div class="row radio">
                     <div class="col-md-6 col-sm-6 ">
                       <label for="" class="col-form-label-lg block">History of prolonged seizures > 5min?</label>
-                      <input type="radio" name="HistoryOfProlongedSeizures" value="Male" id="Yes" class=""> Yes <br>
-                      <input type="radio" name="HistoryOfProlongedSeizures" value="" id="No"> No
+                      <input type="radio" name="HistoryOfProlongedSeizures" value="Yes" id="seizures_greater_5min" class=""> Yes <br>
+                      <input type="radio" name="HistoryOfProlongedSeizures" value="no" id="seizures_greater_5min"> No
                     </div>
 
 
                     <div class="col-md-6 col-sm-6 ">
                       <label for="" class="col-form-label-lg block">Was the patient admitted to hospital?</label>
-                      <input type="radio" name="HospitalAdmitted" value="" id="Yes" class=""> Yes <br>
-                      <input type="radio" name="HospitalAdmitted" value="" id="No"> No
+                      <input type="radio" name="HospitalAdmitted" value="Yes" id="admition_to_hospital" class=""> Yes <br>
+                      <input type="radio" name="HospitalAdmitted" value="no" id="admition_to_hospital"> No
                     </div>
                   </div>
 
@@ -394,16 +379,16 @@
                   <div class="row radio">
                     <div class="col-md-6 col-sm-6 ">
                       <label for="" class="col-form-label-lg block">What type of seizure?</label>
-                      <input type="radio" name="SeizureType" value="" id="Convulsive" class=""> Convulsive <br>
-                      <input type="radio" name="SeizureType" value="" id="nonconvulsive"> Nonconvulsive
+                      <input type="radio" name="SeizureType" value="Convulsive" id="type_of_seizure" class=""> Convulsive <br>
+                      <input type="radio" name="SeizureType" value="nonconvulsive" id="type_of_seizure"> Nonconvulsive
                     </div>
 
 
                     <div class="col-md-6 col-sm-6 ">
                       <label for="" class="col-form-label-lg block">Seizures were controlled on:</label>
-                      <input type="radio" name="ControlleSeizure " value="" id="1st line" > 1st line <br>
-                      <input type="radio" name="ControlleSeizure" value="" id="2nd line"> 2nd line <br>
-                      <input type="radio" name="ControlleSeizure" value="" id="3rd line"> 3rd line
+                      <input type="radio" name="ControlleSeizure " value="1st line" id="1st line" > 1st line <br>
+                      <input type="radio" name="ControlleSeizure" value="2nd line" id="2nd line"> 2nd line <br>
+                      <input type="radio" name="ControlleSeizure" value="3rd line" id="3rd line"> 3rd line
                     </div>
                   </div>
 
@@ -416,7 +401,7 @@
 
                     <div class="col-md-4">
                       <label class="col-form-label-lg">Specify AED on discharge:</label>
-                      <input type="text" name="" value="" class="form-control-lg form-control">
+                      <input type="text" name="" id="aed_on_discharge" class="form-control-lg form-control">
                     </div>
                     
                   </div>
@@ -442,17 +427,17 @@
                 <fieldset class="main-info seizureHistory" style="margin-top: 40px;">
                   <legend class="SeizureHistoryLegand">Etiology</legend>
 
-                  <div class="form-row">
+                  <div class="row">
                     <div class="col-md-3 col-sm-6">
                         <div class="form-group ">
                           <label for="Etiology" class="col-form-label-lg">Etiology</label>
-                          <select class="form-control form-control-lg selection" id="Etiology"> 
-                            <option>Idiopathic (genetic)</option>
-                            <option>Structural</option>
-                            <option>Metabolic</option>
-                            <option>Immune</option>
-                            <option>Infection</option>
-                            <option>Unknown</option>
+                          <select class="form-control form-control-lg selection" id="etiology"> 
+                            <option value="Idiopathic (genetic)">Idiopathic (genetic)</option>
+                            <option value="Structural">Structural</option>
+                            <option value="Metabolic">Metabolic</option>
+                            <option value="Immune">Immune</option>
+                            <option value="Infection">Infection</option>
+                            <option value="Unknown">Unknown</option>
                             </select>
                           </div>
                       </div>
@@ -498,6 +483,7 @@
 
 
               <div class="mt-5 " style="text-align: center;">
+                  <a href="#" class=" button btn btn-success save "  onclick="sendJSON()">Save</a><br>
                   <a href="info.html" class="button btn btn-secondary" id="Back">
                     
                     <i class="fa fa-arrow-left"></i>

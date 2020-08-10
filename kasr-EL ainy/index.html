@@ -8,7 +8,7 @@
 
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
    
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/index-style.css">
@@ -29,14 +29,10 @@
       
       <ul class="list-group list-group-flush" >
           
-        <a href="index2.html" class="list-group-item list-group-item-action activeTab" id="dashboard">
-           <i class="fa fa-tachometer  mr-2 hvr-icon"></i>
-          </i>
-          Dashboard
-        </a>
+        
       
       
-        <a href="patients.html" class="list-group-item list-group-item-action " id="patients">
+        <a href="index.html" class="list-group-item list-group-item-action activeTab" id="patients">
           <i class="fa fa-user mr-2 hvr-icon"></i>
           Patients
         </a>
@@ -92,130 +88,277 @@
   <!-- Start Part 2 -->
 
   <div class="part2">
-    <div class="logo">
-      
+    <div class="AddPatient">
+        <a class="button btn btn-primary btn-lg btn-block" href="info.html" >
+                <i class="fa fa-plus"></i> 
+                Add Patient
+        </a>  
     </div>
 
-    <div class="latest">
-      <h4>Latest Activity</h4>
-      <div class="activity">
-        <div class="image">
-          <img src="https://i.postimg.cc/fT7jkmk8/17.png" alt="vector">
-        </div>
-        <div class="info">
-          <p><strong>Michelli Jones</strong> Posted an update in the group <strong>The Social Network</strong></p>
-          <span>4 years, 7 months ago</span>
-          <p>Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away. (Antoine de saint EXupery)</p>
-        </div>
-      </div>
-      <div class="activity">
-        <div class="image">
-          <img src="https://i.postimg.cc/PfW8Mhhx/18.png" alt="vector">
-        </div>
-        <div class="info">
-          <p><strong>Monta Ellis</strong> Posted an update in the group <strong>The Tourist</strong></p>
-          <span>4 years, 7 months ago</span>
-          <p>Victory goes to the player who makes the next-to-last mistake. (Chessmaster Savielly Grigorievitch Tartakower)</p>
-        </div>
-      </div>
-      <div class="activity">
-        <div class="image">
-          <img src="https://i.postimg.cc/YCpNF0WM/16.png" alt="vector">
-        </div>
-        <div class="info">
-          <p><strong>Picabo Street</strong> Posted an update in the group <strong>Monsters, Inc.</strong></p>
-          <span>4 years, 7 months ago</span>
-          <p>I think 'Hail to the Chief' has a nice ring to it. (John F. Kennedywhen asked what is his favourite song)</p>
-          <p><i>Efficiently evisculate ubiquitous alignments through scalable web-readiness. Phosfluorescently restore resource-leveling growth strategies for multifunctional best practices.</i></p>
-          <p>Energistically enhance real-time synergy for future-proof... <span>&nbsp;&nbsp;&nbsp;[Read more]</span></p>
-        </div>
-      </div>
-      <div class="activity">
-        <div class="image">
-          <img src="https://i.postimg.cc/y8vmyKm9/15.png" alt="vector">
-        </div>
-        <div class="info">
-          <p><strong>MaliVai Washington</strong> Posted an update</p>
-          <span>4 years, 7 months ago</span>
-          <p>Try to learn something about everything and everything about something. (Thomas Henry Huxley)</p>
-        </div>
-      </div>
-      <div class="activity">
-        <div class="image">
-          <img src="https://i.postimg.cc/wBMhWr2r/14.png" alt="vector">
-        </div>
-        <div class="info">
-          <p><strong>Seamus</strong> Posted an update</p>
-          <span>4 years, 7 months ago</span>
-          <p>To Love oneself is the beginning of a lifelong romance (Oscar Wilde)</p>
-        </div>
-      </div>
-      <button>Load More</button>
-    </div>
+    <div class="PateintList">
+      <h4>Patients List</h4>
+      <table class="table table-bordered table-striped " >
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col" style="text-align: center; width: 300px;">Action</th>
+           
+              <th scope="col">First name</th>
+              <th scope="col">Middle name</th>
+              <th scope="col">Last name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>
+                <button class="btn btn-secondary  ">
+                  <i class="fa fa-eye"> </i>
+                  View
+                </button>
+                <button class="btn btn-primary  ">
+                  <i class="fa fa-edit"> </i>
+                  Edit
+                </button>
+                <button class="btn btn-danger  ">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+                  Delete
+                </button>
+              </td>
+              
+              <td>Alaa</td>
+              <td>Hashem</td>
+              <td>Abd Elrhman</td>
+            </tr>
 
-    <div class="posts">
-      <h4>Latest Posts</h4>
-      <div class="post">
-        <div class="image">
-          <img src="https://i.postimg.cc/zGbz0SWj/pic01.jpg" alt="img-post">
-        </div>
-        <div class="info">
-          <h3>Phosfluorescently procrastinate Standards</h3>
-          <p>Dramatically Pursure innovative services before out-of-box metrics. Professionally seize web-enabled services before distinctive internal or "organic" source. Dynamically deliver clien... <i class="fas fa-angle-double-right fa-xs"></i></p>
-        </div>
-      </div>
-      <div class="post">
-        <div class="image">
-          <img src="https://i.postimg.cc/J4d7Ndy0/pic02.jpg" alt="img-post">
-        </div>
-        <div class="info">
-          <h3>Dynamically Provide access to interoperable</h3>
-          <p>Proactively foster superior growth strategies and adaptive users. Conveniently deploy timely Strategic theme areas vis-s-vis B2B scenarios. Progressively Cultivate Viral Partnerships after state of th... <i class="fas fa-angle-double-right fa-xs"></i></p>
-        </div>
-      </div>
-      <div class="post">
-        <div class="image">
-          <img src="https://i.postimg.cc/yYNYSz82/pic07.jpg" alt="img-post">
-        </div>
-        <div class="info">
-          <h3>Uniquely promote resource-leveling platforms</h3>
-          <p>Proactively foster superior growth strategies and adaptive users. Conveniently deploy timely Strategic theme areas vis-s-vis B2B scenarios. Progressively Cultivate Viral Partnerships after state of th... <i class="fas fa-angle-double-right fa-xs"></i></p>
-        </div>
-      </div>
-      <div class="num">
-        <span>1</span>
-        <span>2</span>
-        <i class="fas fa-chevron-right fa-xs"></i>
-      </div>
-    </div>
+            <tr>
+              <th scope="row">2</th>
+              <td>
+                <button class="btn btn-secondary  ">
+                  <i class="fa fa-eye"> </i>
+                  View
+                </button>
+                <button class="btn btn-primary  ">
+                  <i class="fa fa-edit"> </i>
+                  Edit
+                </button>
+                <button class="btn btn-danger  ">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+                  Delete
+                </button>
+              </td>
+           
+              <td>Yasmin</td>
+              <td>Rabea</td>
+              <td>Korny</td>
+            </tr>
 
-    <div class="features">
-      <h4>The Features</h4>
-      <div class="feat">
-        <div class="image">
-          <img src="https://i.postimg.cc/13k9TnrZ/web1.jpg" alt="img-feat">
-        </div>
-        <p>Professsionally Pursue world-class applications</p>
+            <tr>
+              <th scope="row">3</th>
+              <td>
+                <button class="btn btn-secondary  ">
+                  <i class="fa fa-eye"> </i>
+                  View
+                </button>
+                <button class="btn btn-primary  ">
+                  <i class="fa fa-edit"> </i>
+                  Edit
+                </button>
+                <button class="btn btn-danger  ">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+                  Delete
+                </button>
+              </td>
+             
+              <td>Rehab</td>
+              <td>Essam</td>
+              <td>Ammar</td>
+            </tr>
+
+            <tr>
+              <th scope="row">4</th>
+              <td>
+                <button class="btn btn-secondary  ">
+                  <i class="fa fa-eye"> </i>
+                  View
+                </button>
+                <button class="btn btn-primary  ">
+                  <i class="fa fa-edit"> </i>
+                  Edit
+                </button>
+                <button class="btn btn-danger  ">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+                  Delete
+                </button>
+              </td>
+              
+              <td>Asmaa</td>
+              <td>Mhamed</td>
+              <td>Rihan</td>
+            </tr>
+
+            <tr>
+              <th scope="row">5</th>
+              <td>
+                <button class="btn btn-secondary  ">
+                  <i class="fa fa-eye"> </i>
+                  View
+                </button>
+                <button class="btn btn-primary  ">
+                  <i class="fa fa-edit"> </i>
+                  Edit
+                </button>
+                <button class="btn btn-danger  ">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+                  Delete
+                </button>
+              </td>
+              
+              <td>Rahma</td>
+              <td>Yehia</td>
+              <td>Abd ElGhany</td>
+            </tr>
+
+            <tr>
+              <th scope="row">6</th>
+              <td>
+                <button class="btn btn-secondary  ">
+                  <i class="fa fa-eye"> </i>
+                  View
+                </button>
+                <button class="btn btn-primary  ">
+                  <i class="fa fa-edit"> </i>
+                  Edit
+                </button>
+                <button class="btn btn-danger  ">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+                  Delete
+                </button>
+              </td>
+              
+              <td>Merna</td>
+              <td>Abo-Bake</td>
+              <td> Mohamed</td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td>
+                <button class="btn btn-secondary  ">
+                  <i class="fa fa-eye"> </i>
+                  View
+                </button>
+                <button class="btn btn-primary  ">
+                  <i class="fa fa-edit"> </i>
+                  Edit
+                </button>
+                <button class="btn btn-danger  ">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+                  Delete
+                </button>
+              </td>
+             
+              <td>Alaa</td>
+              <td>Hashem</td>
+              <td>Hagag</td>
+            </tr>
+
+            <tr>
+              <th scope="row">8</th>
+              <td>
+                <button class="btn btn-secondary  ">
+                  <i class="fa fa-eye"> </i>
+                  View
+                </button>
+                <button class="btn btn-primary  ">
+                  <i class="fa fa-edit"> </i>
+                  Edit
+                </button>
+                <button class="btn btn-danger  ">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+                  Delete
+                </button>
+              </td>
+              
+              <td>Mohamed</td>
+              <td>Mostafa</td>
+              <td>Abd-EL Kader</td>
+            </tr>
+
+            <tr>
+              <th scope="row">9</th>
+              <td>
+                <button class="btn btn-secondary  ">
+                  <i class="fa fa-eye"> </i>
+                  View
+                </button>
+                <button class="btn btn-primary  ">
+                  <i class="fa fa-edit"> </i>
+                  Edit
+                </button>
+                <button class="btn btn-danger  ">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+                  Delete
+                </button>
+              </td>
+              
+              <td>Aya</td>
+              <td>Mostafa</td>
+              <td>Sherif</td>
+            </tr>
+
+            <tr>
+              <th scope="row">10</th>
+              <td>
+                <button class="btn btn-secondary  ">
+                  <i class="fa fa-eye"> </i>
+                  View
+                </button>
+                <button class="btn btn-primary  ">
+                  <i class="fa fa-edit"> </i>
+                  Edit
+                </button>
+                <button class="btn btn-danger  ">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+                  Delete
+                </button>
+              </td>
+              
+              <td>Aya</td>
+              <td>Mostafa</td>
+              <td>Sherif</td>
+            </tr>
+
+            <tr>
+              <th scope="row">11</th>
+              <td>
+                <button class="btn btn-secondary  ">
+                  <i class="fa fa-eye"> </i>
+                  View
+                </button>
+                <button class="btn btn-primary  ">
+                  <i class="fa fa-edit"> </i>
+                  Edit
+                </button>
+                <button class="btn btn-danger  ">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+                  Delete
+                </button>
+              </td>
+              
+              <td>Aya</td>
+              <td>Mostafa</td>
+              <td>Sherif</td>
+            </tr>
+
+
+
+
+
+
+          </tbody>
+        </table>
+
       </div>
-      <div class="feat">
-        <div class="image">
-          <img src="https://i.postimg.cc/1Xf2sMy7/web2.jpg" alt="img-feat">
-        </div>
-        <p>Holisticly evolve highly efficient</p>
-      </div>
-      <div class="feat">
-        <div class="image">
-          <img src="https://i.postimg.cc/fypFLXLz/web3.jpg" alt="img-feat">
-        </div>
-        <p>Professsionally drive ubiquitous technology</p>
-      </div>
-      <div class="feat">
-        <div class="image">
-          <img src="https://i.postimg.cc/XNztQMgR/web4.png" alt="img-feat">
-        </div>
-        <p>Uniquely promote resource-leveling platforms</p>
-      </div>
-    </div>
   </div>
 
   <!-- End Part 2 -->
