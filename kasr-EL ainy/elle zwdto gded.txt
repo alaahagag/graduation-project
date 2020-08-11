@@ -1,0 +1,27 @@
+#tests de  hya el labs
+# elle zwdto fe el tests kan el date
+# 7tet el final impression m3 el imaging w kan feh kam 7aga n2sen 7tthom b3d el featsures htla2e kol el asame el gdeda
+# el eeg kan na2s feh kam 7aga zwdthom b3d klmt report htla2e el 7gat el gdeda 
+
+
+
+
+{
+	
+
+
+
+	
+	
+	"imaging":[{"date":"13/8/2020","sequences":"arbg","contrast_enhancement":true,"results":"zy el fol","lateralization":"qqqq","distribution":"gaussian","location_cortical":"wwww","location_subcortical":"tybja","details":"dfdf","report":"","features":[{"fname":"kmmkm"}],"diagnosis":"kwis","ageofonset":"mmm","etiology":"uuuu"
+	,"classification":"nughty","syndrome":"mnm","finaldiagnosis":"ok","comments":"efr","counselling":"pppp"}],
+	
+	"EEG":[{"result":"negative","date":"13/8/2020","scalpEEG":"during the session","type":"type","reason":"rrr","frequency_of_PDR":3,"posteriorrhythm":false,"source_of_EEG":"scalp","behavioral_recorded":"blalalal","reasonProvocative_measures":"klam kteer","number_of_seizures":2,"dischargelocation":"r8y kter brdo","localizedside":"right","interictal_Circumstances":"klam klam","interictal_frequency":"mmmnmnj","interictal_special_pattern":"okkkkkk","ictal_abnormalities":"ppppp","same_icatal_features":"dddd","ictal_location":"left","ictal_pattern":"mmmmmm","ictal_with":"kkkk","focal_slowing":true,"attenuation":"ttt","eeg_slowing":"qqq","report":"" ,"localizedlobe":"any","location":"aaa","side":"right","generalisedslowing":"gnnn",
+	"lobe":"mmm","specify":"ooo","comments":"comment"}],
+
+	"tests":[{"testType":"cbc","labName":"elborg","labAddress":"9 alkasr elainy street","date":"12/12"}]
+
+			
+
+
+}

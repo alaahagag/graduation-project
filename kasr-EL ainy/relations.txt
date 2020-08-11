@@ -1,0 +1,89 @@
+ @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL)
+    @JsonManagedReference
+
+    private Set<Seizure> seizure;
+
+   
+
+
+
+    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL)
+    @JsonManagedReference
+
+    private Set<Dependent> dependent;
+
+   
+
+    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private Set<Test> tests;
+
+   
+
+
+
+    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private Set<EEG> EEG;
+
+    
+
+
+
+    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private Set<NeuroScore> neuroScore;
+
+   
+
+    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL)
+    @JsonManagedReference
+
+    private Set<Imaging> imaging;
+
+   
+
+
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JsonManagedReference
+
+    private History history;
+
+   
+
+
+
+
+
+    @ManyToMany(cascade = CascadeType.ALL)
+
+    private Set<SpecialHabits> specialhabits;
+
+    
+
+
+
+
+
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<Comorbidities> como;
+
+   
+
+
+
+
+    @ManyToMany( cascade = CascadeType.ALL)
+    private List<AED>  aed;
+
+    
+
+
+
+    @ManyToMany( cascade = CascadeType.ALL)
+
+    private List<SurgicalProcedures>  procedures;
+
+    
