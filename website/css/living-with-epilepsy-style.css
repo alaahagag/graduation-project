@@ -1,0 +1,116 @@
+/*
+  
+  FirstColor: #695577
+  SecondColor: #bb0f14
+  #e5e7f1
+*/
+
+
+
+/* Start Upper Bar */
+/*body
+ {
+  height:7000px
+ }*/
+
+.upper-bar {
+  background-color:#695577;
+  color: #fff;
+  padding:10px;
+}
+p
+{
+  margin: 5px;
+  font-size: 25px;
+  font-style: italic;
+}
+ .search 
+ {
+  margin-left: 5px;
+ }
+.btn 
+{
+   border: 1px solid #bb0f14;
+   color: #fff;
+}
+
+
+
+/* End Upper Bar */
+/* Start Navbar */
+
+.navbar-brand > span {
+  font-size: 40px
+}
+
+.navbar-brand span:first-child {
+  color:#695577;
+  font-weight: bold;
+}
+
+.navbar-brand span:last-child {
+  color: #bb0f14;
+}
+
+.navbar-nav .nav-link {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-left: 20px;
+  color: #08526d;
+  font-weight: bold
+}
+
+.navbar-nav .active > .nav-link {
+  color: #bb0f14 !important
+}
+
+/* End Navbar */
+/* start bread */
+
+.Breadcrumb
+{
+  padding: 10px;
+  margin-left: 80px;
+  background-color: transparent;
+}
+
+
+
+
+
+/* end bread */
+/*start side-bar */
+.wrapper {
+    display: flex;
+    position: static;
+}
+.sidebar {
+    width: 200px; 
+    height: 50vh;
+    margin-left: 80px;
+    background-color:#edebf3; 
+    color: #695577;
+  
+}
+.sidebar .nav-pills .nav-link
+{
+  color: #695577;
+}
+.content
+{
+  margin-left: 50px;
+  padding-top: 50px;
+
+}
+.content h4 
+{
+    color: #695577;
+    font-size: 30px;
+    margin: 10px;
+}
+p
+{
+  font-size: 20px;
+  margin: 20px;
+  font-style: unset;
+}
