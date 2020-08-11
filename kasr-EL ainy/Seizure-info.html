@@ -89,7 +89,7 @@
                     <div class="col-md-3 col-sm-6 ">
                       <div class="form-group ">
                         <label for="FocalMotorOnset" class="col-form-label-lg">Focal motor onset</label>
-                        <select class="form-control form-control-lg selection" id="fmname">
+                        <select class="form-control form-control-lg selection" id="focalMotors">
                           <option value="Automatism">Automatism</option>
                           <option value="Hyperkinetic">Hyperkinetic</option>
                           <option value="Tonic">Tonic</option>
@@ -109,7 +109,7 @@
                     <div class="form-group">
                       <label for="FocalNon-motor " class="col-form-label-lg">Focal Non-motor(Aura)</label>
                       <!-- Multiple selection -->
-                      <select class="form-control" id="fnmname" multiple="multiple" style="overflow-x: auto; height: 185px;">
+                      <select class="form-control" id="focalnonMotors" multiple="multiple" style="overflow-x: auto; height: 185px;">
                         <optgroup label="Press Ctrl to select more..">
 
                           <optgroup label="1.Autonomic">
@@ -146,7 +146,7 @@
                 <div class="form-group">
                   <label for="Generalized-motor " class="col-form-label-lg">Generalized motor onset</label>
                   <!-- Multiple selection -->
-                  <select class="form-control" id="gmname" multiple="multiple" style="overflow-x: auto; height: 185px;">
+                  <select class="form-control" id="generalizedMotors" multiple="multiple" style="overflow-x: auto; height: 185px;">
                     <optgroup label="Press Ctrl to select more..">
                       <option value="TCS">TCS</option>
                       <option value="Tonic">Tonic</option>
@@ -164,7 +164,7 @@
                 <div class="form-group">
                   <label for="Generalized-NonMotor " class="col-form-label-lg">Generalized non-motor </label>
                   <!-- Multiple selection -->
-                  <select class="form-control" id="gnname" multiple="multiple" style="overflow-x: auto; height: 185px;">
+                  <select class="form-control" id="generalizednonMotors" multiple="multiple" style="overflow-x: auto; height: 185px;">
                     <optgroup label="Press Ctrl to select more..">
                       <option value="Typical">Typical</option>
                       <option value="Atypica">Atypica</option>
@@ -181,7 +181,7 @@
                <div class="form-group">
 
                 <label for="Semiology" class="col-form-label-lg">Semiology:</label>
-                <textarea class="form-control" id="Ssemiology" rows="7" placeholder="symptoms during the seizure..." ></textarea>
+                <textarea class="form-control" id="semiology" rows="7" placeholder="symptoms during the seizure..." ></textarea>
 
             </div>
                       
@@ -196,7 +196,7 @@
               <div class="col-md-4 col-sm-4">
                 <div class="form-group ">
                   <label for="Associated-features" class="col-form-label-lg">Associated features:</label>
-                  <select class="form-control form-control-lg " id="afname" multiple="multiple" style="overflow-x: auto; height: 185px;"> 
+                  <select class="form-control form-control-lg " id="assfeatures" multiple="multiple" style="overflow-x: auto; height: 185px;"> 
                     <optgroup label="Press Ctrl to select more ..">
                       <option value="Rolling eyes">Rolling eyes</option>
                       <option value="Tongue biting">Tongue biting</option>
@@ -217,7 +217,7 @@
               <div class="col-md-5 col-sm-4" style="margin-top:50px; ">
                 <div class="form-group">
                   <label for="Specify-features" class="col-form-label-lg"></label>
-                  <textarea class="form-control" id="Specifyfeatures" rows="4" placeholder="Specify here..." ></textarea>
+                  <textarea class="form-control" id="specify" rows="4" placeholder="Specify here..." ></textarea>
 
                 </div>
               </div>
@@ -253,7 +253,7 @@
               <div class="col-md-4 col-sm-6">
                 <div class="form-group selestion ">
                   <label for="Post-ictal" class="col-form-label-lg">Postictal</label>
-                  <select class="form-control form-control-lg selection " id="Postictal"> 
+                  <select class="form-control form-control-lg selection " id="postictal"> 
                     <option value="Nose whipping ">Nose whipping</option>
                     <option value="Lateralizing">Lateralizing</option>
                     <option value="Cough">Cough</option>
@@ -363,8 +363,8 @@
                 <div class="row radio">
                   <div class="col-md-6 col-sm-6 ">
                     <label for="" class="col-form-label-lg block">History of prolonged seizures > 5min?</label>
-                    <input type="radio" name="HistoryOfProlongedSeizures" value="Yes" id="seizures_greater_5min" class=""> Yes <br>
-                    <input type="radio" name="HistoryOfProlongedSeizures" value="no" id="seizures_greater_5min"> No
+                    <input type="radio" name="HistoryOfProlongedSeizures" value="Yes" id="history" class=""> Yes <br>
+                    <input type="radio" name="HistoryOfProlongedSeizures" value="no" id="history"> No
                   </div>
 
 
@@ -386,9 +386,9 @@
 
                   <div class="col-md-6 col-sm-6 ">
                     <label for="" class="col-form-label-lg block">Seizures were controlled on:</label>
-                    <input type="radio" name="ControlleSeizure " value="1st line" id="1st line" > 1st line <br>
-                    <input type="radio" name="ControlleSeizure" value="2nd line" id="2nd line"> 2nd line <br>
-                    <input type="radio" name="ControlleSeizure" value="3rd line" id="3rd line"> 3rd line
+                    <input type="radio" name="ControlleSeizure " value="1st line" id="seizurecontrol" > 1st line <br>
+                    <input type="radio" name="ControlleSeizure" value="2nd line" id="seizurecontrol"> 2nd line <br>
+                    <input type="radio" name="ControlleSeizure" value="3rd line" id="seizurecontrol"> 3rd line
                   </div>
                 </div>
 
@@ -396,7 +396,7 @@
                 <div class="row">
                   <div class="col-md-4">
                     <label class="col-form-label-lg">What precipitated SE?</label>
-                    <input type="text" name="" value="" class="form-control-lg form-control">
+                    <input type="text" name="" id="precipitated" class="form-control-lg form-control">
                   </div>
 
                   <div class="col-md-4">
@@ -410,12 +410,12 @@
                 <div class="row">
                   <div class="col-md-4">
                     <label class="col-form-label-lg">Duration of hospital stay?</label>
-                    <input type="text" name="" value="" class="form-control-lg form-control">
+                    <input type="text" name="" id="durationofstay" class="form-control-lg form-control">
                   </div>
 
                   <div class="col-md-4">
                     <label class="col-form-label-lg">Patient required intubation:</label>
-                    <input type="text" name="" value="" class="form-control-lg form-control">
+                    <input type="text" name="" id="intubation" class="form-control-lg form-control">
                   </div>
                   
                 </div>
@@ -447,7 +447,7 @@
                     <div class="col-md-3 col-sm-6">
                       <div class="form-group ">
                         <label for="pastHistory" class="col-form-label-lg">Structural(past history)</label>
-                        <select class="form-control form-control-lg selection" id="pastHistory"> 
+                        <select class="form-control form-control-lg selection" id="structural"> 
                           <option>Perinatal</option>
                           <option>Post traumatic</option>
                           <option>Post infection</option>
@@ -469,7 +469,7 @@
                 <div class="row">
                   <div class="col-md-4"> 
                     <label class="col-form-label-lg">Duration between brain lesion and onset of seizures:</label>
-                    <input type="text" name="" value="" class="form-control-lg form-control">
+                    <input type="text" id="brainlesionAge"  class="form-control-lg form-control">
                     
                   </div>
 
