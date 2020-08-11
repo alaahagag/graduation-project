@@ -1,0 +1,16 @@
+{
+
+
+"procedures":[{"date":"",
+"type":"",
+"side":"",
+"intraoperative_EcoG":"",
+"pathology":""}]
+
+
+
+
+
+
+
+}

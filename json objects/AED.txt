@@ -1,0 +1,13 @@
+{
+
+
+
+"aed":[{"currentAED":"",
+"drug_formulation":"",
+"dose_mg":"",
+
+"effectiveness":"",
+"sideeffect":""}]
+
+
+}

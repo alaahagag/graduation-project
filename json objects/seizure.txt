@@ -1,0 +1,36 @@
+
+
+
+{
+
+
+
+
+"seizure":[{"age_of_onset":"",
+"mode":"",
+"classification": [{"cname":""}],
+"focalMotors": [{"fmname":""}],
+"focalnonMotors": [{"fnmname":""}],
+"generalizedMotors": [{"gmname":""}],
+"generalizednonMotors": [{"gnname":""}],
+"semiology":"",
+"assfeatures": [{"afname":""}],
+"specify":"",
+"symptom_appearance":"",
+"number":"",
+"duration":"",
+"postictal":"",
+"circadianRhythm":"",
+"triggertype":"",
+"frequency_before_AED":"",
+"frequency_after_AED":"",
+"longest_period":"5mins"
+
+}]
+
+
+
+
+
+
+}

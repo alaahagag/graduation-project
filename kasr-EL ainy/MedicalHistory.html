@@ -12,7 +12,7 @@
     <!-- Font Awesome JS -->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="css/info-style.css">
-   
+   <script type="text/javascript" src="js/seizure-main.js"></script>
 
 </head>
 
@@ -58,7 +58,7 @@
             		<div class="form-row">
             			<div class="col-md-4">
             				<label class="col-form-label-lg">Date:</label>
-            				<input type="date" name="LabDate" class="form-control form-control-lg">	
+            				<input type="date" id="date" class="form-control form-control-lg">	
             			</div>	
             		</div>
 
@@ -954,7 +954,7 @@
                 </a>
                 
 
-                <a href="" class="button btn btn-primary" id="Submit">
+                <a href="#" class="button btn btn-primary" id="Submit" onclick="call()">
                   Submit
                   <i class="fa fa-arrow-right"></i>
                 </a>
