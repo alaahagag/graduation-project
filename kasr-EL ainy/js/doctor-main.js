@@ -8,7 +8,7 @@ function sendJSON(){
             
             // Creating a XHR object 
             let xhr = new XMLHttpRequest(); 
-            let url = "https://jsonplaceholder.typicode.com/users"; 
+            let url = "http://localhost:8282/login"; 
         
             // open a connection 
             xhr.open("POST", url, true); 
@@ -22,12 +22,26 @@ function sendJSON(){
 
                     // Print received data from server 
                     //result.innerHTML = this.responseText;
-               if(xhr.responseText=="login Asuccessfully"){
+                  console.log(this.responseText);
 
-                location.href = "index.html"
-                                              }
+
+
+
 
                 } 
+                if(xhr.responseText=="login Asuccessfully"){
+                     console.log("kolo 100 100");
+
+                location.href="index.html";
+
+                                              }
+                 if(xhr.responseText=="Not Allowed"){
+                   console.log("not allowed");
+
+                                              }
+
+                
+
             }; 
 
             // Converting JSON data to string 

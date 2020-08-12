@@ -114,7 +114,7 @@ function SendJSON()
     var ictal_location =  document.getElementById("ictal_location").value;
     var ictal_pattern =  document.getElementById("ictal_pattern").value;
     var ictal_with =  document.getElementById("ictal_with").value;
-    var Location =  document.getElementById("Location").value;
+    var location =  document.getElementById("location").value;
     var lobe =  document.getElementById("lobe").value;
    
    // for radio buttons
