@@ -140,7 +140,22 @@ function SendJSON()
                 "frequency_before_AED":frequency_before_AED,
                 "frequency_after_AED":frequency_after_AED,
                 "longest_period": longest_period }] ,
-                
+
+                "history":{"seizures_greater_5min":history,
+                "admition_to_hospital":admition_to_hospital,
+                "type_of_seizure":admition_to_hospital,
+                "seizurecontrol":seizurecontrol,
+                "precipitated":precipitated,
+                "aed_on_discharge":aed_on_discharge,
+                "durationofstay":durationofstay,
+                "intubation":intubation,
+
+                "etiology":etiology,
+                "structural":structural,
+                "brainlesionAge":brainlesionAge
+                },
+
+
 
                     "tests":[{
                     "date":date}]
