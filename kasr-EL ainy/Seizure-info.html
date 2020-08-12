@@ -386,9 +386,9 @@
 
                   <div class="col-md-6 col-sm-6 ">
                     <label for="" class="col-form-label-lg block">Seizures were controlled on:</label>
-                    <input type="radio" name="ControlleSeizure " value="1st line" id="seizurecontrol" > 1st line <br>
-                    <input type="radio" name="ControlleSeizure" value="2nd line" id="seizurecontrol"> 2nd line <br>
-                    <input type="radio" name="ControlleSeizure" value="3rd line" id="seizurecontrol"> 3rd line
+                    <input type="radio" name="ControlleSeizure " value="1st line" id=" seizurecontrol" > 1st line <br>
+                    <input type="radio" name="ControlleSeizure" value="2nd line" id=" seizurecontrol"> 2nd line <br>
+                    <input type="radio" name="ControlleSeizure" value="3rd line" id=" seizurecontrol"> 3rd line
                   </div>
                 </div>
 
@@ -488,7 +488,7 @@
         
      
           <div class="mt-5 " style="text-align: center;">
-              <button type='submit' class="button btn save" onclick="SendJSON()">Save</button><br>
+             
               <a href="info.html" class="button btn btn-secondary" id="Back">
                 
                 <i class="fa fa-arrow-left"></i>
@@ -496,10 +496,10 @@
               </a>
               
 
-              <a href="Follow-up.html" class="button btn btn-primary" id="Next">
-                Next
+              <a href="MedicalHistory.html" class="button btn btn-primary" id="Next" onclick="PassSeizureValue()">
                 <i class="fa fa-arrow-right"></i>
-              </a>
+              Next
+             </a>
 
             </div>
 
