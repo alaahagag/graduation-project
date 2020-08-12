@@ -75,6 +75,142 @@ function SendJSON()
 
     var date =  document.getElementById("date").value;
 
+     // for checkbox
+    var checkboxes = document.getElementsByName('LabType');
+    var labType = "";
+    for (var i=0, n=checkboxes.length;i<n;i++)
+    {
+        if (checkboxes[i].checked)
+        {
+            labType += ","+checkboxes[i].value;
+        }
+    }
+    if (labType) labType = labType.substring(1);
+
+    //......... for EEG ..............
+    //for text inputs
+
+    var report =  document.getElementById("report").value;
+    var date =  document.getElementById("date").value;
+    var frequency_of_PDR =  document.getElementById("frequency_of_PDR").value;
+    var number_of_seizures =  document.getElementById("number_of_seizures").value;
+    var ictal_abnormalities =  document.getElementById("ictal_abnormalities").value;
+   
+   // for text area 
+    var specify =  document.getElementById("specify").value;
+    var comments =  document.getElementById("comments").value;
+  
+  // for dropdown lists
+    var scalpEEG =  document.getElementById("scalpEEG").value;
+    var reason =  document.getElementById("reason").value;
+    var source_of_EEG =  document.getElementById("source_of_EEG").value;
+    var behavioral_recorded =  document.getElementById("behavioral_recorded").value;
+    var reasonProvocative_measures =  document.getElementById("reasonProvocative_measures").value;
+    var dischargelocation =  document.getElementById("dischargelocation").value;
+    var localizedlobe =  document.getElementById("localizedlobe").value;
+    var interictal_Circumstances =  document.getElementById("interictal_Circumstances").value;
+    var interictal_frequency =  document.getElementById("interictal_frequency").value;
+    var interictal_special_pattern =  document.getElementById("interictal_special_pattern").value;
+    var ictal_location =  document.getElementById("ictal_location").value;
+    var ictal_pattern =  document.getElementById("ictal_pattern").value;
+    var ictal_with =  document.getElementById("ictal_with").value;
+    var Location =  document.getElementById("Location").value;
+    var lobe =  document.getElementById("lobe").value;
+   
+   // for radio buttons
+    var type = document.querySelector('input[name =EEGType]:checked').value;
+    var result = document.querySelector('input[name =EEGResults]:checked').value;
+    var posteriorrhythm = document.querySelector('input[name =Posterior]:checked').value;
+    var localizedside = document.querySelector('input[name =LocalizedSide]:checked').value;
+    var ictal_abnormalities = document.querySelector('input[name =IctalAbnormalities]:checked').value;
+    var same_icatal_features = document.querySelector('input[name =AreIctalFeatures]:checked').value;
+    var side = document.querySelector('input[name =LocalizedSide]:checked').value;
+    var focal_slowing = document.querySelector('input[name =FocalSlowing]:checked').value;
+    var generalisedslowing = document.querySelector('input[name =GeneralisedSlowing]:checked').value;
+    var attenuation = document.querySelector('input[name =Attenuation]:checked').value;
+
+   //---------------------- for imaging ----------------
+
+   // for text inputs
+    var report =  document.getElementById("report").value;
+    var date =  document.getElementById("date").value;
+    
+    // for text area
+
+    var details =  document.getElementById("details").value;
+
+    // for dropdown list 
+    var sequences =  document.getElementById("sequences").value;
+    var results =  document.getElementById("results").value;
+    var distribution =  document.getElementById("distribution").value;
+    var location_cortical =  document.getElementById("location_cortical").value;
+    var location_subcortical =  document.getElementById("location_subcortical").value;
+    var features =  document.getElementById("features").value;
+     
+    // for radio buttons 
+    var contrast_enhancement = document.querySelector('input[name =Contrast]:checked').value;
+    var lateralization = document.querySelector('input[name =Lateralization]:checked').value;
+   
+   //----------- test score --------//
+    var date =  document.getElementById("date").value;
+    var test =  document.getElementById("test").value;
+    var score =  document.getElementById("score").value;
+
+    //----------- Surgical procedure---------------//
+
+    var date =  document.getElementById("date").value;
+    var type =  document.getElementById("type").value;
+    var side =  document.getElementById("side").value;
+    var intraoperative_EcoG =  document.getElementById("intraoperative_EcoG").value;
+    var pathology =  document.getElementById("pathology").value;
+
+    //----------- for impression --------------//
+    var diagnosis =  document.getElementById("diagnosis").value;
+    var classification =  document.getElementById("classification").value;
+    var ageofonset =  document.getElementById("ageofonset").value;
+    var etiology =  document.getElementById("etiology").value;
+    var syndrome =  document.getElementById("syndrome").value;
+    var finaldiagnosis =  document.getElementById("finaldiagnosis").value;
+    var comments =  document.getElementById("date").value;
+    var counselling =  document.getElementById("date").value;
+
+    //------------- for AED ------------------------//
+    var dose_mg =  document.getElementById("dose_mg").value;
+    var sideeffect =  document.getElementById("sideeffect").value;
+
+    var effectiveness = document.querySelector('input[name =Effectiveness]:checked').value;
+
+
+    // for checkbox
+    var checkboxeAED = document.getElementsByName('AED');
+    var AED = "";
+    for (var i=0, n=checkboxeAED.length;i<n;i++)
+    {
+        if (checkboxeAED[i].checked)
+        {
+            AED += ","+checkboxeAED[i].value;
+        }
+    }
+    if (AED) AED = AED.substring(1);
+
+
+    // for checkbox
+    var checkboxesDrug = document.getElementsByName('Drug');
+    var Drug = "";
+    for (var i=0, n=checkboxesDrug.length;i<n;i++)
+    {
+        if (checkboxesDrug[i].checked)
+        {
+            Drug += ","+checkboxesDrug[i].value;
+        }
+    }
+    if (Drug) Drug = Drug.substring(1);
+
+
+
+
+
+
 
    
 
@@ -154,18 +290,82 @@ function SendJSON()
                 "structural":structural,
                 "brainlesionAge":brainlesionAge
                 },
+                "tests":[{"testType":labType,
+                "date":date}] ,
+                "EEG":[{"report":report,
+                        "date":date,
+                        "scalpEEG":scalpEEG,
+                        "type":type,
+                        "result":result,
+                        "specify":specify,
+                        "reason":reason,
+                        "source_of_EEG":source_of_EEG,
+                        "behavioral_recorded":behavioral_recorded,
+                        "reasonProvocative_measures":reasonProvocative_measures,
+                        "posteriorrhythm":posteriorrhythm,
+                        "frequency_of_PDR":frequency_of_PDR,
+                        "number_of_seizures":number_of_seizures,
+                        "ictal_abnormalities":ictal_abnormalities,
+                        "dischargelocation":dischargelocation,
+                        "localizedlobe":localizedlobe,
+                        "localizedside":localizedside,
+                        "interictal_Circumstances":interictal_Circumstances,
+                        "interictal_frequency":interictal_frequency,
+                        "interictal_special_pattern":interictal_special_pattern,
+                        "comments":comments,
+                        "same_icatal_features":same_icatal_features,
+                        "side":side,
+                        "ictal_location":ictal_location,
+                        "ictal_pattern":ictal_pattern,
+                        "ictal_with":ictal_with,
+                        "focal_slowing":focal_slowing,
+                        "generalisedslowing":generalisedslowing,
+                        "eeg_slowing":eeg_slowing,
+                        "location":location,
+                        "lobe":lobe,
+                        "attenuation":attenuation}],
+
+                    "imaging":[{"report":report,
+
+                    "date":date,
+                    "sequences":sequences,
+                    "contrast_enhancement":contrast_enhancement,
+                    "results":results,
+                    "details":details,
+                    "lateralization":lateralization,
+                    "distribution":distribution,
+                    "location_cortical":location_cortical,
+                    "location_subcortical":location_subcortical,
+                    "features":[{"fname":features}],
+
+                    "diagnosis":diagnosis,
+                    "classification":classification,
+                    "ageofonset":ageofonset,
+                    "etiology":etiology,
+                    "syndrome":syndrome,
+                    "finaldiagnosis":finaldiagnosis,
+                    "comments":comments,
+                    "counselling":counselling }],
 
 
+                    "neuroScore":[{"date":date,
+                    "test":test,
+                    "score":score}],
 
-                    "tests":[{
-                    "date":date}]
+                    "procedures":[{"date":date,
+                    "type":type,
+                    "side":side,
+                    "intraoperative_EcoG":intraoperative_EcoG,
+                    "pathology":pathology}],
 
-                
-                
+                    "aed":[{"currentAED":AED,
+                    "drug_formulation":Drug,
+                    "dose_mg":dose_mg,
 
+                    "effectiveness":effectiveness,
+                    "sideeffect":sideeffect}]
 
-
-             });
+                   });
 
 
 
