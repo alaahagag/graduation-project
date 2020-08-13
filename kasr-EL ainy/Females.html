@@ -21,12 +21,12 @@
                       <div class="col-sm-12 col-md-6 col-xm-12">
                            <h4>Add Patient</h4>
                       </div>
-                      <div class="col-sm-12 col-md-6 " >
-                          <button class="btn btn-secondary  ">
-                            <i class="fa fa-angle-double-left" aria-hidden="true"></i>
-                            Back
-                          </button>
-                      </div>
+                       <div class="col-sm-12 col-md-6 " >
+                        <a href="index.html" class="button btn btn-secondary" id="Back">
+                         <i class="fa fa-arrow-left"></i>
+                           Back
+                        </a>
+                    </div>
                   </div>
                  
               </div>
@@ -65,15 +65,15 @@
                       <div class="col-md-4 " >
                         <div class="form-group ">
                           <label for="Contraception " class="col-form-label-lg">Contraception</label>
-                          <select class="form-control form-control-lg selection" id="Contraception">
+                          <select class="form-control form-control-lg selection" id="contraception">
                             <optgroup label="OCP">
-                              <option>combined</option>
-                              <option>PG only</option>
+                              <option value="combined">combined</option>
+                              <option value="PG only">PG only</option>
                             </optgroup>
-                            <option>Hormonal injections</option>
-                            <option>IUD</option>
-                            <option>Others</option>
-                            <option>None</option>
+                            <option value="Hormonal injections">Hormonal injections</option>
+                            <option value="IUD">IUD</option>
+                            <option value="Others">Others</option>
+                            <option value="None">None</option>
                           </select>
 
                           
@@ -86,10 +86,10 @@
 
                         <div class="form-group ">
                             <label for="Regularity" class="col-form-label-lg">Regularity</label>
-                            <select class="form-control form-control-lg selection" id="Regularity">
+                            <select class="form-control form-control-lg selection" id="regularity">
                               
-                              <option>Regular</option>
-                              <option>Irregular</option>
+                              <option value="Regular">Regular</option>
+                              <option value="Irregular">Irregular</option>
                               
                             </select>
                           </div>
@@ -97,7 +97,7 @@
 
                       <div class="col-md-4 ">
                               <label class="col-form-label-lg">Number of previous pregnancies:</label>
-                              <input type="number" name="pregnancies-number" value="" class="form-control-lg form-control">
+                              <input type="number" name="pregnancies-number" id="prepreg" class="form-control-lg form-control">
                       </div>
                     </div>
 
@@ -105,7 +105,7 @@
 
                         <div class="col-md-4">
                             <label class="col-form-label-lg">Number of previous pregnancies on AED:</label>
-                            <input type="number" name="pregnancies-numberAED" value="" class="form-control-lg form-control">
+                            <input type="number" name="pregnancies-numberAED" id="prepregAED" class="form-control-lg form-control">
                         
                         </div>
                       </div>
@@ -127,7 +127,7 @@
                     <div class="col-md-4">
                       <div class="form-group ">
                           <label for="NO-of-Deliveries" class="col-form-label-lg">NO.of Deliveries</label>
-                          <select class="form-control form-control-lg selection" id="NO-of-Deliveries" style="overflow-x: auto; "  onchange="javascript: showhide();">
+                          <select class="form-control form-control-lg selection" id="preDeliv" style="overflow-x: auto; "  onchange="javascript: showhide();">
                             <option value="none">None</option>
                             <option value="one-pregnency">one</option>
                             <option value="two-pregnency">two</option>
@@ -148,9 +148,9 @@
                           
                           <div class="form-group ">
                             <label for="1st-pregnencyMode" class="col-form-label-lg">Mode</label>
-                            <select class="form-control form-control-lg selection" id="1st-pregnencyMode">
-                              <option value="">NVD</option>
-                              <option value="">CS</option>
+                            <select class="form-control form-control-lg selection" id="mode">
+                              <option value="NVD">NVD</option>
+                              <option value="CS">CS</option>
                               
                             </select>
                           </div>
@@ -158,12 +158,12 @@
                         <div class="col-md-4 col-sm-6">
                           <div class="form-group ">
                             <label for="1st-pregnencyOutcome" class="col-form-label-lg">Outcome</label>
-                            <select class="form-control form-control-lg selection" id="1st-pregnencyOutcome">
-                              <option value="">Full term</option>
-                              <option value="">Preterm</option>
-                              <option value="">still birth</option>
-                              <option value="">abortion week</option>
-                              <option value="">congenital malformation</option>
+                            <select class="form-control form-control-lg selection" id="outcome">
+                              <option value="Full term">Full term</option>
+                              <option value="Preterm">Preterm</option>
+                              <option value="still birth">still birth</option>
+                              <option value="abortion week">abortion week</option>
+                              <option value="congenital malformation">congenital malformation</option>
                             
                             </select>
                           </div>
@@ -173,11 +173,11 @@
                           <div class="form-group ">
                             <label for="1st-pregnencyAnesthesia" class="col-form-label-lg">Anesthesia
                             </label>
-                            <select class="form-control form-control-lg selection" id="1st-pregnencyAnesthesia">
-                              <option value="">General</option>
-                              <option value="">spinal</option>
-                              <option value="">inhalation</option>
-                              <option value="">None</option>
+                            <select class="form-control form-control-lg selection" id="anesth">
+                              <option value="General">General</option>
+                              <option value="pinal">spinal</option>
+                              <option value="inhalation">inhalation</option>
+                              <option value="None">None</option>
                             </select>
                           </div>
                         </div>
@@ -189,15 +189,15 @@
                         <div class="col-md-4 col-sm-6">
 
                           <label class="col-form-label-lg">AED:</label>
-                          <input type="text" class="form-control form-control-lg" placeholder="Type">
+                          <input type="text" class="form-control form-control-lg" placeholder="Type" id="aed">
                         </div>
                         <div class="col-md-4 col-sm-6">
                           <label class="col-form-label-lg"></label>
-                          <input type="text" class="form-control form-control-lg" placeholder="Dose" style="margin-top:15px;">
+                          <input type="text" id="aed" class="form-control form-control-lg" placeholder="Dose" style="margin-top:15px;">
                         </div>
                         <div class="col-md-4 col-sm-6">
                           <label class="col-form-label-lg">Frequency per month:</label>
-                          <input type="text" class="form-control form-control-lg">
+                          <input type="text" id="freq" class="form-control form-control-lg">
                           
                         </div>
                       </div>
@@ -207,21 +207,21 @@
 
                         <div class="col-md-4 radio-female">
                           <label for="sex" class="col-form-label-lg block ">Seizures?</label>
-                          <input type="radio" name="Seizures" value="Yes" id="Male" class=""> Yes <br>
-                          <input type="radio" name="Seizures" value="No" id="Female"> No
+                          <input type="radio" name="Seizures" value="Yes" id="complications" class=""> Yes <br>
+                          <input type="radio" name="Seizures" value="No" id="complications"> No
                         </div>
 
 
                         <div class="col-md-4 radio-female">
                           <label for="sex" class="col-form-label-lg block ">Perinatal deaths?</label>
-                          <input type="radio" name="Perinatal-deaths" value="Yes" id="Male" class=""> Yes <br>
-                          <input type="radio" name="Perinatal-deaths" value="No" id="Female"> No
+                          <input type="radio" name="Perinatal-deaths" value="Yes" id="complications" class=""> Yes <br>
+                          <input type="radio" name="Perinatal-deaths" value="No" id="complications"> No
                         </div>
 
                         <div class="col-md-4 radio-female">
                           <label for="sex" class="col-form-label-lg block ">NICU?</label>
-                          <input type="radio" name="NICU" value="Yes" id="Male" class=""> Yes <br>
-                          <input type="radio" name="NICU" value="No" id="Female"> No
+                          <input type="radio" name="NICU" value="Yes" id="complications" class=""> Yes <br>
+                          <input type="radio" name="NICU" value="No" id="complications"> No
                         </div>
                         
                       </div>
@@ -240,9 +240,9 @@
                           
                           <div class="form-group ">
                             <label for="1st-pregnencyMode" class="col-form-label-lg">Mode</label>
-                            <select class="form-control form-control-lg selection" id="1st-pregnencyMode">
-                              <option value="">NVD</option>
-                              <option value="">CS</option>
+                            <select class="form-control form-control-lg selection" id="mode">
+                              <option value="NVD">NVD</option>
+                              <option value="CS">CS</option>
                               
                             </select>
                           </div>
@@ -250,12 +250,12 @@
                         <div class="col-md-4">
                           <div class="form-group ">
                             <label for="1st-pregnencyOutcome" class="col-form-label-lg">Outcome</label>
-                            <select class="form-control form-control-lg selection" id="1st-pregnencyOutcome">
-                              <option value="">Full term</option>
-                              <option value="">Preterm</option>
-                              <option value="">still birth</option>
-                              <option value="">abortion week</option>
-                              <option value="">congenital malformation</option>
+                            <select class="form-control form-control-lg selection" id="outcome">
+                              <option value="Full term">Full term</option>
+                              <option value="Preterm">Preterm</option>
+                              <option value="still birth">still birth</option>
+                              <option value="abortion week">abortion week</option>
+                              <option value="congenital malformation">congenital malformation</option>
                             
                             </select>
                           </div>
@@ -265,11 +265,11 @@
                           <div class="form-group ">
                             <label for="1st-pregnencyAnesthesia" class="col-form-label-lg">Anesthesia
                             </label>
-                            <select class="form-control form-control-lg selection" id="1st-pregnencyAnesthesia">
-                              <option value="">General</option>
-                              <option value="">spinal</option>
-                              <option value="">inhalation</option>
-                              <option value="">None</option>
+                            <select class="form-control form-control-lg selection" id="anesth">
+                              <option value="General">General</option>
+                              <option value="spinal">spinal</option>
+                              <option value="inhalation">inhalation</option>
+                              <option value="None">None</option>
                             </select>
                           </div>
                         </div>
@@ -281,17 +281,17 @@
                       <div class="form-row">
                         <div class="col-md-4 col-sm-6">
                           <label class="col-form-label-lg">AED:</label>
-                          <input type="text" class="form-control form-control-lg" placeholder="Type">
+                          <input type="text" class="form-control form-control-lg" id="aed" placeholder="Type">
                         </div>
 
                         <div class="col-md-4 col-sm-6">
                           <label class="col-form-label-lg"></label>
-                          <input type="text" class="form-control form-control-lg" placeholder="Dose" style="margin-top:15px;">
+                          <input type="text" class="form-control form-control-lg" id="aed" placeholder="Dose" style="margin-top:15px;">
                         </div>
 
                         <div class="col-md-4 col-sm-6">
                           <label class="col-form-label-lg">Frequency per month:</label>
-                          <input type="text" class="form-control form-control-lg">
+                          <input type="text" id="freq" class="form-control form-control-lg">
                         </div>
                       </div>
 
@@ -300,21 +300,21 @@
 
                         <div class="col-md-4 radio-female">
                           <label for="sex" class="col-form-label-lg block ">Seizures?</label>
-                          <input type="radio" name="Seizures" value="Yes" id="Male" class=""> Yes <br>
-                          <input type="radio" name="Seizures" value="No" id="Female"> No
+                          <input type="radio" name="Seizures" value="Yes" id="complications" class=""> Yes <br>
+                          <input type="radio" name="Seizures" value="No" id="complications"> No
                         </div>
 
 
                         <div class="col-md-4 radio-female">
                           <label for="sex" class="col-form-label-lg block ">Perinatal deaths?</label>
-                          <input type="radio" name="Perinatal-deaths" value="Yes" id="Male" class=""> Yes <br>
-                          <input type="radio" name="Perinatal-deaths" value="No" id="Female"> No
+                          <input type="radio" name="Perinatal-deaths" value="Yes" id="complications" class=""> Yes <br>
+                          <input type="radio" name="Perinatal-deaths" value="No" id="complications"> No
                         </div>
 
                         <div class="col-md-4 radio-female">
                           <label for="sex" class="col-form-label-lg block ">NICU?</label>
-                          <input type="radio" name="NICU" value="Yes" id="Male" class=""> Yes <br>
-                          <input type="radio" name="NICU" value="No" id="Female"> No
+                          <input type="radio" name="NICU" value="Yes" id="complications" class=""> Yes <br>
+                          <input type="radio" name="NICU" value="No" id="complications"> No
                         </div>
                         
                       </div>
@@ -334,9 +334,9 @@
                           
                           <div class="form-group ">
                                     <label for="1st-pregnencyMode" class="col-form-label-lg">Mode</label>
-                                    <select class="form-control form-control-lg selection" id="1st-pregnencyMode">
-                                      <option value="">NVD</option>
-                                      <option value="">CS</option>
+                                    <select class="form-control form-control-lg selection" id="mode">
+                                      <option value="NVD">NVD</option>
+                                      <option value="CS">CS</option>
                                       
                                     </select>
                           </div>
@@ -346,12 +346,12 @@
                            
 
                             <label for="1st-pregnencyOutcome" class="col-form-label-lg">Outcome</label>
-                            <select class="form-control form-control-lg selection" id="1st-pregnencyOutcome">
-                              <option value="">Full term</option>
-                              <option value="">Preterm</option>
-                              <option value="">still birth</option>
-                              <option value="">abortion week</option>
-                              <option value="">congenital malformation</option>
+                            <select class="form-control form-control-lg selection" id="outcome">
+                              <option value="Full term">Full term</option>
+                              <option value="Preterm">Preterm</option>
+                              <option value="still birth">still birth</option>
+                              <option value="abortion week">abortion week</option>
+                              <option value="congenital malformation">congenital malformation</option>
                               
                             </select>
                           </div>
@@ -362,11 +362,11 @@
 
                             <label for="1st-pregnencyAnesthesia" class="col-form-label-lg">Anesthesia
                             </label>
-                            <select class="form-control form-control-lg selection" id="1st-pregnencyAnesthesia">
-                              <option value="">General</option>
-                              <option value="">spinal</option>
-                              <option value="">inhalation</option>
-                              <option value="">None</option>
+                            <select class="form-control form-control-lg selection" id="anesth">
+                              <option value="General">General</option>
+                              <option value="spinal">spinal</option>
+                              <option value="inhalation">inhalation</option>
+                              <option value="None">None</option>
                              
                               
                             </select>
@@ -381,17 +381,17 @@
 
                         <div class="col-md-4 col-sm-6">
                           <label class="col-form-label-lg">AED:</label>
-                          <input type="text" class="form-control form-control-lg" placeholder="Type">
+                          <input type="text" id="aed" class="form-control form-control-lg" placeholder="Type">
                         </div>
 
                         <div class="col-md-4 col-sm-6">
                           <label class="col-form-label-lg"></label>
-                          <input type="text" class="form-control form-control-lg" placeholder="Dose" style="margin-top:15px;">
+                          <input type="text" class="form-control form-control-lg" id="aed" placeholder="Dose" style="margin-top:15px;">
                         </div>
 
                         <div class="col-md-4 col-sm-6">
                           <label class="col-form-label-lg">Frequency per month:</label>
-                          <input type="text" class="form-control form-control-lg">
+                          <input type="text" id="freq" class="form-control form-control-lg">
                         </div>
 
                       </div>
@@ -401,21 +401,21 @@
 
                         <div class="col-md-4 radio-female">
                           <label for="sex" class="col-form-label-lg block ">Seizures?</label>
-                          <input type="radio" name="Seizures" value="Yes" id="Male" class=""> Yes <br>
-                          <input type="radio" name="Seizures" value="No" id="Female"> No
+                          <input type="radio" name="Seizures" value="Yes" id="complications" class=""> Yes <br>
+                          <input type="radio" name="Seizures" value="No" id="complications"> No
                         </div>
 
 
                         <div class="col-md-4 radio-female">
                           <label for="sex" class="col-form-label-lg block ">Perinatal deaths?</label>
-                          <input type="radio" name="Perinatal-deaths" value="Yes" id="Male" class=""> Yes <br>
-                          <input type="radio" name="Perinatal-deaths" value="No" id="Female"> No
+                          <input type="radio" name="Perinatal-deaths" value="Yes" id="complications" class=""> Yes <br>
+                          <input type="radio" name="Perinatal-deaths" value="No" id="complications"> No
                         </div>
 
                         <div class="col-md-4 radio-female">
                           <label for="sex" class="col-form-label-lg block ">NICU?</label>
-                          <input type="radio" name="NICU" value="Yes" id="Male" class=""> Yes <br>
-                          <input type="radio" name="NICU" value="No" id="Female"> No
+                          <input type="radio" name="NICU" value="Yes" id="complications" class=""> Yes <br>
+                          <input type="radio" name="NICU" value="No" id="complications"> No
                         </div>
                         
                       </div>
@@ -438,9 +438,9 @@
                           
                           <div class="form-group ">
                             <label for="1st-pregnencyMode" class="col-form-label-lg">Mode</label>
-                            <select class="form-control form-control-lg selection" id="1st-pregnencyMode">
-                              <option value="">NVD</option>
-                              <option value="">CS</option>
+                            <select class="form-control form-control-lg selection" id="mode">
+                              <option value="NVD">NVD</option>
+                              <option value="CS">CS</option>
                               
                             </select>
                           </div>
@@ -448,12 +448,12 @@
                         <div class="col-md-4">
                           <div class="form-group ">
                             <label for="1st-pregnencyOutcome" class="col-form-label-lg">Outcome</label>
-                            <select class="form-control form-control-lg selection" id="1st-pregnencyOutcome">
-                              <option value="">Full term</option>
-                              <option value="">Preterm</option>
-                              <option value="">still birth</option>
-                              <option value="">abortion week</option>
-                              <option value="">congenital malformation</option>
+                            <select class="form-control form-control-lg selection" id="outcome">
+                              <option value="Full term">Full term</option>
+                              <option value="Preterm">Preterm</option>
+                              <option value="still birth">still birth</option>
+                              <option value="abortion week">abortion week</option>
+                              <option value="congenital malformation">congenital malformation</option>
                             
                             </select>
                           </div>
@@ -463,11 +463,11 @@
                           <div class="form-group ">
                             <label for="1st-pregnencyAnesthesia" class="col-form-label-lg">Anesthesia
                             </label>
-                            <select class="form-control form-control-lg selection" id="1st-pregnencyAnesthesia">
-                              <option value="">General</option>
-                              <option value="">spinal</option>
-                              <option value="">inhalation</option>
-                              <option value="">None</option>
+                            <select class="form-control form-control-lg selection" id="anesth">
+                              <option value="General">General</option>
+                              <option value="spinal">spinal</option>
+                              <option value="inhalation">inhalation</option>
+                              <option value="None">None</option>
                             </select>
                           </div>
                         </div>
@@ -481,17 +481,17 @@
                         <div class="col-md-4 col-sm-6">
 
                           <label class="col-form-label-lg">AED:</label>
-                          <input type="text" class="form-control form-control-lg" placeholder="Type">
+                          <input type="text" id="aed" class="form-control form-control-lg" placeholder="Type">
                         </div>
 
                         <div class="col-md-4 col-sm-6">
                           <label class="col-form-label-lg"></label>
-                          <input type="text" class="form-control form-control-lg" placeholder="Dose" style="margin-top:15px;">
+                          <input type="text" class="form-control form-control-lg" id="aed" placeholder="Dose" style="margin-top:15px;">
                         </div>
 
                         <div class="col-md-4 col-sm-6">
                           <label class="col-form-label-lg">Frequency per month:</label>
-                          <input type="text" class="form-control form-control-lg">
+                          <input type="text" id="freq" class="form-control form-control-lg">
                           
                         </div>
 
@@ -502,21 +502,21 @@
 
                         <div class="col-md-4 radio-female">
                           <label for="sex" class="col-form-label-lg block ">Seizures?</label>
-                          <input type="radio" name="Seizures" value="Yes" id="Male" class=""> Yes <br>
-                          <input type="radio" name="Seizures" value="No" id="Female"> No
+                          <input type="radio" name="Seizures" value="Yes" id="complications" class=""> Yes <br>
+                          <input type="radio" name="Seizures" value="No" id="complications"> No
                         </div>
 
 
                         <div class="col-md-4 radio-female">
                           <label for="sex" class="col-form-label-lg block ">Perinatal deaths?</label>
-                          <input type="radio" name="Perinatal-deaths" value="Yes" id="Male" class=""> Yes <br>
-                          <input type="radio" name="Perinatal-deaths" value="No" id="Female"> No
+                          <input type="radio" name="Perinatal-deaths" value="Yes" id="complications" class=""> Yes <br>
+                          <input type="radio" name="Perinatal-deaths" value="No" id="complications"> No
                         </div>
 
                         <div class="col-md-4 radio-female">
                           <label for="sex" class="col-form-label-lg block ">NICU?</label>
-                          <input type="radio" name="NICU" value="Yes" id="Male" class=""> Yes <br>
-                          <input type="radio" name="NICU" value="No" id="Female"> No
+                          <input type="radio" name="NICU" value="Yes" id="complications" class=""> Yes <br>
+                          <input type="radio" name="NICU" value="No" id="complications"> No
                         </div>
                         
                       </div>
@@ -535,9 +535,9 @@
                           
                           <div class="form-group ">
                               <label for="1st-pregnencyMode" class="col-form-label-lg">Mode</label>
-                              <select class="form-control form-control-lg selection" id="1st-pregnencyMode">
-                                <option value="">NVD</option>
-                                <option value="">CS</option>
+                              <select class="form-control form-control-lg selection" id="mode">
+                                <option value="NVD">NVD</option>
+                                <option value="CS">CS</option>
                                 
                               </select>
                           </div>
